@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.hacker.eaun.cigmanotes.NoteActivity"
+    android:background="@color/colorPrimary"
+    android:id="@+id/activity_note">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay_out_top"
+        android:elevation="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_TITLE"
+            android:textColor="@color/TextColourWhite"
+            android:hint="@string/title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:inputType="textCapSentences|text"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:elegantTextHeight="false"
+            android:ellipsize="middle"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText_DESCRIPTION"
+            android:layout_gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/TextColourWhite"
+            android:hint="@string/description"
+            android:textStyle="bold"
+            android:singleLine="false"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:ellipsize="middle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_out_top"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:elevation="20dp"
+        android:id="@+id/linearLayout8"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:id="@+id/button_add"
+            android:layout_weight=".5"
+            android:background="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textColor="@color/TextColourWhite"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            android:id="@+id/button_delete"
+            android:layout_weight=".5"
+            android:background="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textColor="@color/TextColourWhite"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:id="@+id/button_update"
+            android:layout_weight=".5"
+            android:background="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textColor="@color/TextColourWhite"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SHOW"
+            android:id="@+id/button_show"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"
+            android:layout_weight=".5"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rv3"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp">
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+1-7-5,BOTH,Single Level Where Used List
+1-7-9,BOTH,Currently used in
+4-1-11,BOTH,Check stock volume
+4-3-3,CKD,Add urgent order
+5-3-1,CKD,Containers dates - actual arrival
+5-3-2,CKD,Container arrival by part
+5-3-8,CKD,Progress Check
+1-1,BOTH,Check QTY/ BOX
+5-4-7,DOMESTIC,Progress Check
+4-1-4,DOMESTIC,Add a supplement - Enter part number / Supplier / Enter / Put 2 to change then A then qty Press enter wait for order to processed
+4-1-5,DOMESTIC,Add a supplement - multiple
+9-2-1,BOTH,How much stock is currently (at any time)
+9-2-2,BOTH,Stock in/out (to check how many were sent to the line)
+9-2-3,BOTH,Stock at stock take (check out how much the line has)
+9-2-4,BOTH,Stock inquiry - all warehouses
+9-2-6,BOTH,Stock movements by actual date
+81-8-12-8,BOTH,Build vs Actual - email
+9-13-2,BOTH,Which Line has asked for it (Field - aupart)
+5-1-81,DOMESTIC,Back order Report
+5-4-11,DOMESTIC,Back order Report
+16-1-3,BOTH,Print kanbans
+4-1-6,DOMESTIC,Print Delivery order
+4-1-10,DOMESTIC,"Add route (999)Add to the table where you will be changed QTY"
+1-31-1,DOMESTIC,when you want to change your options
+3-2,DOMESTIC,Progress check ( how many units of production produces over men)
+5-4-5,DOMESTIC,Receiving parts by part No and supplier
+1-31-1,DOMESTIC,Flag  On / Off  (  INSPECTION Y remove Y and parts will not show on DWOS)
+1-18,SKD,Flag  On / Off
+70-6E-9,DOMESTIC,Cigma down date
+5-1-82,RECEIVING,Print pallet labels ( pallet I.D)
+16-1-22,MOULD,Kanban print
+9-13-7,DOMESTIC,pick check
+1-31-1,PLAN,"Variance (part number  ACT : = C VAR CTRL to Y ACCEPT RANGE MAX & MIN to 999-1 change back when done)"
+5-4-1 ,RECEIVING,booking in
+5-4-5,RECEIVING,RECEIVING STATUS BY PART & Supplier / Enter part number. (Reciprocal)
+5-3-6,RECEIVING,Container and air freight receiving
+5-3-1,RECEIVING,Confirm Container/ Air freight /Enter container number - Plant (MF) - Company (KLN/YAS) - W/H (1)
+5-3-2,RECEIVING,Check part number to find out what container or air freight it is on
+5-3-3,RECEIVING,Check Container delivery (CONTAINER DETAIL INQUIRY )
+70-16-2,MOULD,Scan parts from moulding into warehouse 1.
+9-12-3,DOMESTIC,Print pick list for lines. Mark with X on the line with a pick then enter / Press F7 / Use X again + shift F1 to print
+5-4-2,RECEIVING,Receiving Entry Cancellation.Enter Delivery Order No: + Reference No.: from A-notice select part number with an X press F10
+5-4-6,RECEIVING,Receiving Status by Delivery Order(NON DCJ) (Reciprocal)
+5-4-7,RECEIVING,Progress Check (NON DCJ) / Type Part number and Date then Press Enter.
+5-4-3,RECEIVING,A-Notice Reprint / Enter part number / Place an X next to the order and Press CK10 to Process Selection.
+5-5-1,TOOL ROOM,Create a Receiver/ Enter PO number and press (F4).
+5-5-5,TOOL ROOM,Purchase Order Inquiry.
+10-3-1-2,TOOL ROOM,Actual Stock Issued Input (Parts/Raw Material)/Enter warehouse 1 / ISSUED TO(DEPT. NO) /part No. /U.M/Qty enter.

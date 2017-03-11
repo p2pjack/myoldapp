@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+     android:title="General"
+        android:textColor="@color/TextColourBlack">
+        <EditTextPreference
+            android:title="Cigma Notes"
+            android:textColor="@color/TextColourBlack"
+            android:summary="Change the app name"
+            android:key="title"
+            android:defaultValue="Cigma Notes">
+        </EditTextPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Theme"
+        android:textColor="@color/TextColourBlack">
+        <CheckBoxPreference
+            android:title="Background colour Dark"
+            android:textColor="@color/TextColourBlack"
+            android:summary="Set The Background colour to Dark"
+            android:key="background_colour"
+            android:defaultValue="false">
+        </CheckBoxPreference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:fitsSystemWindows="true"
+     tools:context="com.hacker.eaun.cigmanotes.MainWatchActivity"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:focusable="false"
+            android:elevation="40dp"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="8dp"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorFAB2"
+        app:elevation="15dp"
+        app:pressedTranslationZ="12dp"
+        android:src="@drawable/ic_add_black"
+        android:fadeScrollbars="false"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="66dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="8dp"
+        android:visibility="invisible"
+        app:elevation="10dp"
+        app:backgroundTint="@color/colorFAB1"
+        app:pressedTranslationZ="12dp"
+        android:src="@drawable/ic_add_black" />
+    <TextView
+        android:layout_toLeftOf="@+id/fab1"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="150dp"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/TextColourWhite"
+        android:text="Cigma"
+        android:textSize="15sp"
+        android:textIsSelectable="false"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:shadowColor="#010101"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:elevation="24dp"
+        android:id="@+id/float_text1"
+        android:background="@color/colorPrimary"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:elevation="6dp"
+        app:backgroundTint="#33691E"
+        app:pressedTranslationZ="12dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_fab_usage" />
+    <TextView
+        android:layout_toLeftOf="@+id/fab"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="96dp"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/TextColourWhite"
+        android:text="WMS"
+        android:textSize="15sp"
+        android:textIsSelectable="false"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:shadowColor="#010101"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:elevation="24dp"
+        android:id="@+id/float_text"
+        android:background="@color/colorPrimary"/>
+
+    <include layout="@layout/content_main"
+        android:id="@+id/include" />
+
+</android.support.design.widget.CoordinatorLayout>
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textview_search"
+    android:animateLayoutChanges="true"
+    android:baselineAligned="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:background="#DD2C00">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#03A9F4"
+                    android:layout_margin="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="SUPPLIER CODE"
+                            android:id="@+id/textView11"
+                            android:textAlignment="center"
+                            android:layout_marginTop="8dp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_code"
+                            android:layout_margin="8dp"
+                            android:textColor="@color/TextColourWhite"
+                            android:textStyle="bold"
+                            android:shadowColor="#ec010101"
+                            android:singleLine="false"
+                            android:textSize="15sp"
+                            android:typeface="monospace"
+                            android:background="#FFB300"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="SUPPLIER"
+                            android:id="@+id/textView12"
+                            android:typeface="serif"
+                            android:textAlignment="center"
+                            android:textIsSelectable="true"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:id="@+id/textView_supplier"
+                            android:textColor="@color/TextColourWhite"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:typeface="monospace"
+                            android:shadowColor="#eb000000"
+                            android:background="#FFB300"
+                            android:autoText="false"
+                            android:layout_weight="1"
+                            android:textAlignment="center" />
+                </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

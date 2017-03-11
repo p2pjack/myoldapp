@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="digital_text_size">30dp</dimen>
+    <dimen name="date_text_size">14dp</dimen>
+    <dimen name="digital_text_size_round">35dp</dimen>
+    <dimen name="date_text_size_round">20dp</dimen>
+
+
+
+    <dimen name="digital_x_offset">15dp</dimen>
+    <dimen name="digital_x_offset_round">15dp</dimen>
+    <dimen name="digital_y_offset">110dp</dimen>
+
+    <dimen name="digital_square_x_day">40dp</dimen>
+    <dimen name="digital_square_y_day">60dp</dimen>
+    <dimen name="digital_square_x_steps">40dp</dimen>
+    <dimen name="digital_square_y_steps">150dp</dimen>
+    <dimen name="digital_square_x_date">40dp</dimen>
+    <dimen name="digital_square_y_date">80dp</dimen>
+
+    <dimen name="digital_round_x_date">60dp</dimen>
+    <dimen name="digital_round_y_date">70dp</dimen>
+    <dimen name="digital_round_x_steps">40dp</dimen>
+    <dimen name="digital_round_y_steps">150dp</dimen>
+    <dimen name="digital_round_x_day">60dp</dimen>
+    <dimen name="digital_round_y_day">50dp</dimen>
+</resources>

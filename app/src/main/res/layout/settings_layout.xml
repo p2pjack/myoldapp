@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    android:baselineAligned="true">
+
+    <LinearLayout
+        android:id="@+id/setting_list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:background="#03A9F4"
+        android:layout_margin="@dimen/Gen_three"
+        android:layout_weight="1">
+
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,304 @@
+1,A109,Alps Electric,Diana Zilinskiene,6289,Functional,UK,2
+2,A120,Novelis,Diana Zilinskiene,6289,Pipe,Germany,1
+3,A131,Asmo Indonesia,Nick Green,6224,Functional,Indonesia,11
+4,A150,Denso Air System Czech,Richard Preston,6223,PIPES,Czech,42
+5,A254,Denso Airs Systems Japan,NPI,null,Pipes,null,null
+6,A17,Ambersil,Filomena Le Gros,6256,Chemical,UK,3
+7,A204,Avon Turkey,Diana Zilinskiene,6289,Rubber,Turkey,1
+8,A205,AER Maerdy,Richard Preston,6296,Rubber,UK,26
+9,A220,Anixter Components ,Diana Zilinskiene,6289,Plastics,UK,1
+10,A172,Asmo CZ s.r.o.,Richard Preston,6223,Functional,Czech,12
+11,A208,Asmo CZ s.r.o.,Richard Preston,6223,Functional,Czech,24
+12,A177,Aoyama Automotive Fasteners,Nick Green,6224,Pressed,Czech,1
+13,A44,Applied Chemicals,Filomena Le Gros,6256,Chemical,UK,1
+14,A60,AB Electronik,Diana Zilinskiene,6289,Functional,Germany,1
+15,A67,Aida Bliss,Filomena Le Gros,6256,Chemical,UK,1
+16,A73,Alcate Vacuum Technology,Filomena Le Gros,6256,Chemical,UK,1
+17,A183,Avon Rubber Portugal,Diana Zilinskiene,6289,Rubber,Spain,3
+18,A199,AE Rubber,David Delany,6282,rubber,UK,17
+19,A245,Abbey Polymers,Nick Green,6224,Raw Material,UK,1
+20,A246,Addmaster,Nick Green,6224,Raw Material,UK,1
+21,A247,Albis,Nick Green,6224,Raw Material,UK,1
+22,B02,BANDO EUROPE GMBH,NO LONGER USED,6334,Rubber,Germany,2
+23,B07,BOC Gases,Filomena Le Gros,6256,Chemical,UK,13
+24,B106,Baylis Automotive,David Delany ,6282,Pressed,UK,33
+25,B108,Bundy TI Automotive,Diana Zilinskiene,6289,Functional,Italy,1
+26,B125,Birkby's,NO LONGER USED,6334,Moulded,UK,9
+27,B128,Bosch (Aftermarket),Richard Preston,6223,Functional,Germany,13
+28,B20,Bosch (Buhl),David Delany,6282,Functional,Germany,1
+29,B63,Metzeler Auto Profile Sys,Diana Zilinskiene,6289,Rubber,UK,1
+30,B66,Brookvale,David Delany,6282,Pressed,UK,17
+31,B67,BC Abrasives,Filomena Le Gros,6256,Chemical,UK,1
+32,B81,Bosch (Malaysia),David Delany,6282,Functional,Germany,3
+33,B159,Bolton Plastics,Nick Green,6224,Plastics,UK,2
+34,B128,Bosch (Ansbach),Richard Preston,6223,Functional,Germany,0
+35,B83,Bosch (France),David Delany,6282,Functional,Germany,1
+36,B169,Bosch Miskolc,David Delany,6282,Functional,Hungary,2
+37,B100,Beru,Diana Zilinskiene,6289,Functional,Portugal,1
+38,B155,Bufab UK Ltd,David Delany,6282,null,Uk,1
+39,B176,BASF,Nick Green,6224,Raw Material,Germany,1
+40,C01,Cameron Price,NO LONGER USED,6309,Moulded,UK,13
+41,C02,Cromwell Tools,Filomena Le Gros,6256,Chemical,UK,2
+42,C04,Crown Plastics,Richard Preston,6296,Plastics,UK,122
+43,C102,Cascoi  Mas Italia Spa,Diana Zilinskiene,6289,Functional,Italy,1
+44,C36,CWL Ltd,NO LONGER USED,6309,Pressed,UK,34
+45,C40,Codan,NO LONGER USED,null,Rubber,UK,1
+46,C53,Knight Metal Services,NO LONGER USED,6224,Slitting,UK,null
+47,C62,Contitech,Diana Zilinskiene,6289,Rubber,Germany,1
+48,C74,Chemetall Speciality Chemicals,Filomena Le Gros,null,Chemical,UK,1
+49,C77,Catem,Diana Zilinskiene,6289,Functional,Germany,10
+50,C97,Cold Formed Products Ltd,David Delany,6282,null,UK,22
+51,D11,Dabbon,NO LONGER USED,6284,Packaging,UK,1
+52,C149,Constelliun Extrusions Decin s.r.o.,Nick Green,6224,Raw Material,Czech,4
+53,C195,J. Cookes,Nick Green,6224,Pressed,UK,12
+54,C196,Colloids,Nick Green,6224,Raw Material,UK,1
+55,D27,Polymer Sealing Solutions (Dowty Automation),Nick Green,6865,Rubber,UK,14
+56,D30,Boxes & Packaging (Mondi),Nick Green,6284,Packaging,UK,115
+57,D109,Dairi Pak,Nick Green,6224,Packaging,UK,12
+58,D38,Denso Thailand,Nick Green,6224,Pressed,Thailand,4
+59,D43,Din-Stock (Midlands) Ltd.,Filomena Le Gros,6256,Chemical,UK,2
+60,D97,Denso Turkey,Diana Zilinskiene,6289,Functional,Turkey,3
+61,D54,Honeywell Sensors,NO LONGER USED,6334,Functional,Germany,2
+62,D70,Denso Manufacturing Midlands Ltd,NO LONGER USED,6865,Pressed,UK,3
+63,D76,Denso Brazil,David Delany,6296,Condensors,Brazil,11
+64,D86,Denso Czech,Richard Preston,6223,Evaporators,Czech,43
+65,D112,Denso Vietnam,NO LONGER USED,6224,Various DNEU,Vitenam,6
+66,D114,Denso Italy (DMIT),Richard Preston,6223,Functional,Italy,1
+67,D118,Dupont,Nick Green,6224,Raw Material,Belgium,2
+68,D118A,Dupont (16-18wk Lead Time Material),Nick Green,6224,Raw Material,Japan,1
+69,E21,Enplas,NO LONGER USED,null,Moulded,UK,10
+70,E23,Eutectic,Filomena Le Gros,6256,Chemical,UK,1
+71,E23,Eutectic,Nick Green,6224,Raw Material,UK,8
+72,E26,Erbsloh,Nick Green,6224,Raw Material,Germany,13
+73,E30,Epcos (Ernst Herrmann),Diana Zilinskiene,6289,Functional,Germany,8
+74,E31,Eberspaecher,Diana Zilinskiene,6289,Functional,Germany,9
+75,E53,Nifco,Diana Zilinskiene,6289,Moulded,UK / JAPAN,8
+76,E63,Euronak,Richard Preston,6223,Rubber,Czech,19
+77,E87,Eaton Aeroquip,Richard Preston,6296,Plastics,UK,30
+78,E92,E2V Quality Sensors / SGX Sensortech,Diana Zilinskiene,6289,Functional,Switzerland,1
+79,E117,ExxonMobil,Nick Green,6224,Raw Material,,3
+80,E127,Eberspaecher Poland,Diana Zilinskiene,6289,Functional,Poland,5
+81,F01,Fowkes & Danks (RICOR),Richard Preston,6296,Pressed,UK,21
+82,F101,Federal Mogul,Nick Green,6224,Rubber,null,3
+83,F28,Brenntag,Filomena Le Gros,6256,Chemical,UK,1
+84,F34,Fabprene,nO LONGER USED,6224,Raw Material,UK,5
+85,F35,Presslite (Frederick Woolley),David Delany,6282,Pressed,UK,159
+86,F38,Fokker Drukwerk,NO LONGER USED,6284,Packaging,Netherlands,25
+87,F40,Fujikoki Corporation,Diana Zilinskiene,6289,Functional,Japan,17
+88,F44,Freudenberg,NO LONGER USED,6865,Rubber,UK,2
+89,F48,Flux Co.,Filomena Le Gros,null,Chemical,Germany,3
+90,F48,Flux Co.,Nick Green,6224,Raw Material,Germany,1
+91,F105,Forward Engineering,David Delany,6282,Pressed,Uk,3
+92,F12,Freudenberg Filters direct to DNEU,Nick Green,6224,Filters,Germany,1
+93,F66,Freudenberg Filters,Diana Zilinskiene,6289,Filters,Germany,4
+94,F79,Fujikoki Czech,Richard Preston,6223,Functional,Czech,14
+95,F121,Flow Dry Kft,David Delany,6282,Dryer,Hungary,1
+96,F80,H.B Fuller,Filomena Le Gros,null,Chemical,UK,1
+97,F84,Freudenburg Technical PRO,NO LONGER USED,6223,Rubber,UK,1
+98,F100,Freudenburg 'O' Ring,Richard Preston,6223,Rubber,Germany,4
+99,F109,Fujita Rashi,David Delany,6282,Fasteners,Czech,32
+100,G15,Gills Cables,NO LONGER USED,6334,Functional,UK,1
+101,G33,Goldline Bearing ,Filomena Le Gros,null,Chemical,UK,1
+102,G36,Bosch Klima Komponenten,Diana Zilinskiene,6289,Functional,Germany,3
+103,G38,Greiner,NO LONGER USED,6296,Rubber,Germany,1
+104,G51,Gates,Diana Zilinskiene,6289,Functional,Bacelona,1
+105,G73,GSM Prismographic,Diana Zilinskiene,6289,Labels,UK,1
+106,G88,ASMX (MEXICO),Diana Zilinskiene,6289,Hoses,Mexico,18
+107,G94,GSW Ohio,NO LONGER USED,6334,Functional,USA,2
+108,G95,GSW Mexico,Diana Zilinskiene,6289,Functional,Mexico,4
+109,H04,HRP Sales,Filomena Le Gros,null,Chemical,UK,1
+110,H07,ALBION CHEMICALS LTD.,Filomena Le Gros,null,Chemical,UK,6
+111,H09,Henkel,Filomena Le Gros,null,Chemical,UK,18
+112,H11,Honda Trading,David Delany,6282,Rubber,UK,28
+113,H108,Heads and All Threads,David Delany,6282,Pressed,UK,4
+114,H24,Hella,Diana Zilinskiene,6289,Functional,Romania,1
+115,H92,Hella (MF113580-0180) only),Diana Zilinskiene,6289,Functional,Germany,2
+116,H53,Hybond,Filomena Le Gros,null,Chemical,UK,3
+117,H80,Houghton International,Filomena Le Gros,null,Chemical,USA,1
+118,H81,Hydro Ellay Enfield,Nick Green,6224,Raw Material,UK,2
+119,H84,Hilltop,Diana Zilinskiene,6289,Pipes,UK,1
+120,H92,Hella (MF246810-1490) only),Diana Zilinskiene,6289,Functional,Germany,1
+121,H33,Hydro Tonder,Nick Green,6224,Raw Material,Germany,3
+122,H105,Henry Hallsteads (Supply Technologies),Nick Green,6282,Raw Material,UK,1
+123,H127,Hella Romania,Diana Zilinskiene,6289,Functional,Romania,1
+124,I03,Idemitsu Lube Europe ,Filomena Le Gros,null,Chemical,Germany,1
+125,null,ILX PLANNING (DNEU) GERMAN MILKRUN,Anthony Stanley,null,null,null,null
+126,I26,International Products Ltd,Filomena Le Gros,null,Chemical,UK,1
+127,I27,Imaje UK Ltd,Filomena Le Gros,null,Chemical,UK,2
+128,I41,ISL Industrial Silicons & Lubs,Filomena Le Gros,null,Chemical,UK,1
+129,I42,ITW Highland,NO LONGER USED,6282,Pressed,uk,1
+130,I77,ITW Siewer,nO LONGER USED,6334,Pressed,Germany,4
+131,I90,Inabata,Nick Green,6224,Raw Material,UK,1
+132,K09,Krah Rwi,Diana Zilinskiene,6289,Functional,Germany,2
+133,K24,Kiyokuni,David Delany,6282,Pressed,UK,90
+134,K103,Kiyokuni,David Delany,6282,Pressed,UK,14
+135,K39,Nitto Denko (Formerly Kyoshin),Richard Preston,6865,Rubber,UK,94
+136,L82,Lander Automotive Ltd,Nick Green,6224,Pipes,UK,15
+137,L89,Lear Harnesses,Nick Green,6224,Functional,Poland,2
+138,L05,LVS,David Delany,6282,Rubber,UK,1
+139,L09,Lewis and Mason Plastics,NO LONGER USED,6865,Plastics,UK,1
+140,L14,Leoni Wiring Systems,Nick Green,6224,Functional,UK,22
+141,L23,Pre-met,Richard Preston,6296,Pressed,UK,15
+142,L33,Linde Gas,Filomena Le Gros,null,Chemical,UK,1
+143,L43,Lazgill Precision,David Delany,6282,Connector,UK,27
+144,L47,D S Smith Packaging,NO LONGER USED,6224,Packaging,UK,8
+145,L50,Leicester Precision,Richard Preston,6296,Connector,UK,25
+146,L54,Liplastec,Richard Preston,6223,Moulded,Czech,10
+147,L79, Le Joint Francais,Nick Green,6296,Rubber (S/P),France,2
+148,M08,Mobil Oil,Filomena Le Gros,null,Chemical,UK,25
+149,M120,Mergon,NO LONGER USED,6296,Moulded,Eire,2
+150,M125,Denso Thermal Systems,Nick Green,6289,Pressed,Italy,7
+151,M136,Trelleborg Fluid Solutions / Tristone,Diana Zilinskiene,6289,Rubber,Czech,8
+152,M111,Maxpack Packaging,Nick Green,6224,Packaging,UK,30
+153,M138,Mitsui Chemicals,Nick Green,6224,Raw Material,UK,2
+154,M144,Mubea,David Delany,6296,Pressed,UK,2
+155,M230,Maxell Mouldings,Diana Zilinskiene,6289,Plastics,UK,82
+156,M201,Mitre Plastics,Richard Preston,6296,Moulded,UK,37
+157,M152,Mitsubshi Belting,Diana Zilinskiene,6289,V Belt,Netherlands,1
+158,M154,Mollertech,NO LONGER USED,6334,Plastics,null,null
+159,M175,Multisorb,Diana Zilinskiene,6289,Functional,UK,1
+160,M211,Mann & Hummel,Diana Zilinskiene,6289,Filters,Germany,3
+161,M35,Middlewich,Diana Zilinskiene,6289,Rubber,UK,3
+162,M40,Moss,NO LONGER USED,6296,Moulded,UK,2
+163,M46,Mocap,Nick Green,6224,Plastics,UK,1
+164,M51,"Anixter Fasteners / OPTIMAS",Diana Zilinskiene,6289,Functional,UK,7
+165,M69,McInnes Tooling Ltd,Filomena Le Gros,null,Chemical,UK,5
+166,M74,MHI - Spares only not normal DWOS orders,NO LONGER USED,6284,Functional,null,4
+167,M197,Marquardt,Diana Zilinskiene,6289,Functional,Germany,1
+168,N06,Denso mfg Michigan,Nick Green,6224,Raw Material,USA,0
+169,N101,National Gummi,Nick Green,6224,Rubber,Germany,1
+170,N16 / N70,Denso Marston,Nick Green,6224,Press,UK,21
+171,N22,Mcfarlanes,NO LONGER USED,6284,Packaging,UK,20
+172,N23,Denso Barcelona,David Delany,6282,Functional,Spain,20
+173,B175,Denso Barcelona (UKL Returnable Pkg),David Delany,6282,Functional,Spain,2
+174,N32,J Nicklin,Nick Green,6224,Pallets,UK,3
+175,N51,Nichirin UK Ltd,Diana Zilinskiene,6289,Rubber,UK,1
+176,N51,Nichirin UK Ltd (Raw Material),Diana Zilinskiene,6289,Raw Material,UK,1
+177,N81,Nichirin UK Ltd (After market MF446130-5780 Only),Diana Zilinskiene,6289,After market,UK,7
+178,N52,Norfolkline,Gill Adams,6948,Transport,null,null
+179,N133,Nexeo Solutions (ABS Plastic Material),Nick Green,6224,Raw Material,UK,1
+180,,NYK (Cz Milkruns),Anthony Stanley,6909,Transport,null,null
+181,O09,Odenwald,Diana Zilinskiene,6289,Rubber,Germany,5
+182,O25,Oetiker UK Ltd,NO LONGER USED,6280,Rubber,UK,1
+183,P135,Piolax,Diana Zilinskiene,6289,,UK,1
+184,P21,P & O Aerosols,Filomena Le Gros,null,Chemical,UK,2
+185,P151,Poppleman,Diana Zilinskiene,6289,Plastics,Germany (UK w/h),3
+186,P23,Protofoam Pack,NO LONGER USED,6284,packaging,UK,null
+187,P39,Preh,Diana Zilinskiene,6289,Functional,Germany,1
+188,P129,Profily CZ,Richard Preston,6223,Rubber,Czech,1
+189,P150,PriTex Ltd,Diana Zilinskiene,6289,Foam,UK,6
+190,P153,Pencom,Nick Green,6224,Fasteners,UK,12
+191,P154,Pimseal,Nick Green,6224,Orings,UK,5
+192,P155,Polyone,Nick Green,6224,Raw Material,,2
+193,P156,Perrite (A. Schulman Thermoplastic Compounds),Nick Green,6224,Raw Material,,1
+194,P161,Polyplastics Europe,Nick Green,6224,Raw Material,Belgium,1
+195,R20,A Raymond,Diana Zilinskiene,6289,Pressed,Germany,5
+196,R113,Ramsay Rubber,Richard Preston,6296,Packing ,UK,58
+197,R21,Delphi,NO LONGER USED,6280,Functional,Germany,0
+198,R22,Rocol,Filomena Le Gros,null,Chemical,UK,1
+199,R24,RHP Transport,Gill Adams,6948,Transport,UK,null
+200,R26,Rubber Astic,NO LONGER USED,null,Rubber,UK,92
+201,R34,Cobra (Not Used),NO LONGER USED,6309,Rubber,UK,5
+202,R35,Alcoa (Reynolds) Aluminium,Nick Green,6224,Raw Material,Netherlands,3
+203,R36,Rapide,Diana Zilinskiene,6289,Pressed,France,2
+204,R43,Rehau,NO LONGER USED,6296,Moulded,UK,2
+205,R48,Tecniacero,Diana Zilinskiene,6289,Pressed,Spain,4
+206,R68,RA Vac Forming,NO LONGER USED,6865,Rubber,UK,8
+207,R93,A Raymond France,null,6296,Press,France,null
+208,R107,Reddiplex,Nick Green,6224,Insulator,UK,10
+209,R108,Recticel,Richard Preston,6223,Packing ,France,2
+210,R117,Recticel Ltd (Corby),Richard Preston,6309,Packing ,UK,7
+211,S02,Carbody Sealing & Safety Solutions,Diana Zilinskiene,6289,Rubber,France,184
+212,S09,Saw & Weld,Filomena Le Gros,null,Chemical,UK,3
+213,X42,Saia Burgess (Hungary),Diana Zilinskiene,6289,Functional,Hungary,1
+214,S122,Sumitomo,Nick Green,6224,Functional,UK,21
+215,S132,Sedco,David Delany,6296,Pressed,null,1
+216,S138,Synteks,Diana Zilinskiene,6289,Clamp,Germany,1
+217,S153,SCA ( Hinckley ),Nick Green,6284,Packaging,UK,13
+218,S17,Scientific Chemicals ,Filomena Le Gros,null,Chemical,UK,7
+219,S186,UACJ Extrusion Czech s.r.o. (Sumikei),Nick Green,6224,Raw Material,Czech,12
+220,S202,Sato,Diana Zilinskiene,6289,Labels,UK,1
+221,S206,Sanoh Europe (France),NO LONGER USED,6334,null,France,2
+222,S21,Solve Fluor Und Derivate ,Filomena Le Gros,null,Chemical,Germany,1
+223,S42,Standard Metalwerke,Nick Green,6224,Raw Material,Germany,3
+224,S45,Swansea,Diana Zilinskiene,6289,Functional,UK,5
+225,S226,Brose (Siemens),Diana Zilinskiene,6289,Functional,Germany,6
+226,S70,Simoldes Acos LDA,NO LONGER USED,null,null,null,null
+227,S51,Satori,Diana Zilinskiene,6289,Functional,Germany,3
+228,S60,BROSE FAHRZEUGTEILE GMBH (Wurzburg),Diana Zilinskiene,6289,Functional,Germany,1
+229,S73,Sei Interconnect,Diana Zilinskiene,6289,Functional,UK,2
+230,S76,Johnson Electrics (Saia Burgess) Switzerland,Diana Zilinskiene,6289,Functional,Switzerland,3
+231,S80,Sprite ,NO LONGER USED,6284,Packaging,UK,8
+232,S84,Schrader Special Products Division,Diana Zilinskiene,6289,Functional,UK,1
+233,S219,Sumika  France,Nick Green,6224,Raw Material,France,1
+234,S238,Sabic,Nick Green,6224,Raw Material,UK,2
+235,S241,Sumika UK,Nick Green,6224,Raw Material,UK,3
+236,S251,Saica Pack,Nick Green,6224,Cardboard,UK,3
+237,T01,TTC (Japan),Nick Green,6224,Raw Material,UK,7
+238,T01,TTC Chemicals,Filomena Le Gros,null,Chemical,UK,31
+239,T01,STS,Anthony Stanley,6909,Logistics,null,null
+240,T10,SCA ( Telford ),NO LONGER USED,6284,Packaging,UK,null
+241,T100,Bassell,Nick Green,6224,Raw Material,UK,3
+242,T105,TTC (Alcoa),Nick Green,6224,Raw Material,USA,5
+243,T116,TR EUROPE,David Delany,6282,Pressed,UK,4
+244,T119,TTC (DSCA),Nick Green,6224,Raw Material,UK,4
+245,T120,TD Deutsche Klimakompressor GmbH,David Delany,6282,Compressers,Germany,19
+246,T130,TTC (Corus),Nick Green,6224,Raw Material,USA,21
+247,T131,TTC (Goesi Hose),Nick Green,6224,Hoses,Japan,26
+248,T138,Thermolast,NO LONGER USED,6224,Rubber,Czech,1
+249,T144,TTC (Nakamura Denki),Nick Green,6224,Functional,UK,4
+250,T145,TTC (Alcoa Hungary),Nick Green,6224,Raw Material,Hungary,1
+251,T151,TTC,Nick Green,6224,Pressed,Japan,12
+252,T152,TTC (Tsuda),Nick Green,6865,Pulleys,Japan,4
+253,T154,TTC (Jagernann),Nick Green,6224,Pressed,USA,2
+254,T157,TTC (KOJIMA PRESS) ,Nick Green,6224,Functional,Japan,6
+255,T158,TTC (TOKYO PARTS),Nick Green,6224,Functional,Japan,16
+256,T162,TTC (Elval),Nick Green,6224,Raw Material,Greece,4
+257,T165,TTC (Toyota supplied parts),Nick Green,6224,Pressed,null,5
+258,T166,TTC (Machinery) Brazing rings,Nick Green,6224,Raw Material,Japan,4
+259,T169,TTC (FIA),Nick Green,6224,Raw Material,Japan,2
+260,T176,Togo Scherdel,Diana Zilinskiene,6289,Pressed,Germany,1
+261,T187,Trelleborg Czech,Richard Preston,6223,Rubber,Czech,17
+262,T19,Three Bond,Filomena Le Gros,null,Chemical,UK,1
+263,T30,Toyota Boshoku Somain,David Delany,6282,Filters,Europe,1
+264,T37,TPL Labels Ltd,NO LONGER USED,6284,Packaging,UK,null
+265,T51,Shimizu ( Welshpool ),In house,6223,Moulded,UK,819
+266,T59,TGK,Diana Zilinskiene,6289,Functional,UK,1
+267,T66,TRW,Diana Zilinskiene,6289,Functional,UK,2
+268,T67,Tucker,Diana Zilinskiene,6289,Rubber,Germany,1
+269,T68,3M,NO LONGER USED,6334,Rubber,Germany,1
+270,T73,TTC (VAW),Nick Green,6224,Raw Material,GERMANY,10
+271,T86,Tungate,NO LONGER USED,6224,Labels DNEU,UK,4
+272,T90,TEAM PRECISION,David Delany,6282,Pipe,UK,60
+273,T96,TTC (SAPA),Nick Green,6224,Raw Material,UK,25
+274,T98,TRB Ltd,Diana Zilinskiene,6289,Functional,UK,2
+275,T06,Tyco Electronics,Diana Zilinskiene,6289,Functional,UK,1
+276,T204,Ticona (Celenese),Nick Green,6224,Raw Material,Hungary,4
+277,T206,TE Connectivity (Tyco) India,Diana Zilinskiene,6289,Functional,India,6
+278,T207,TTUK (Plastics) Arkema Group,Nick Green,6224,Raw Material,,1
+279,T208,Toyota Tsusho UK (Plastics) Polyplastics,Nick Green,6224,Raw Material,,2
+280,T209,TTUK  (Plastics) Polyporpylene Novatec,Nick Green,6224,Raw Material,,1
+281,T210,TTC (Smimizu Japan) Packing,Nick Green,6224,Foam,Japan,12
+282,T216,TTC (Inoac),Nick Green,6224,null,null,null
+283,U03,Unicorn Chemicals,Filomena Le Gros,null,Chemical,UK,4
+284,U08,Universal Marking Ltd,Filomena Le Gros,null,Chemical,null,1
+285,V02,Vickers Laboratories,Filomena Le Gros,null,Chemical,UK,7
+286,V10,Valeo,Diana Zilinskiene,6289,null,null,null
+287,V10,Valeo,Diana Zilinskiene,6289,Functional,null,1
+288,V17,Dura,Diana Zilinskiene,6289,Functional,Germany,4
+289,V19,VW (Kassel) - Order as and when required,Nick Green,6224,Packaging,Germany,25
+290,V26,Video Jet,Filomena Le Gros,,Chemical,UK,4
+291,V28,Volvo - Order as per Volvo's detail,Nick Green,6224,Packaging,Sweden,4
+292,V29,Visteon Systemes,Diana Zilinskiene,6289,Rubber,France,1
+293,W15,Forester PLC,null,null,Chemical,null,null
+294,W25,Welwyn Componants,Diana Zilinskiene,6289,Functional,UK,1
+295,W72,Worldmark Labels,Diana Zilinskiene,6289,Labels,UK,2
+296,W88,Westaflex (Wevista),Diana Zilinskiene,6289,Hoses,France,3
+297,X06,Jenks & Cattell,David Delany,6282,Pressed,UK,12
+298,X11,Jaguar Couriers,Anthony Stanley,6909,Emergency Transport,,null
+299,X33,Joao De Deus & Filhos S.A.,Diana Zilinskiene,6289,Functional,Portugal,8
+300,X47,JAHN Gmbh,David Delany,6282,,Germany,1
+301,Y13,Yazaki Harnesses,Nick Green,6224,Functional,UK/Slovakia,6
+302,Y15,Yazaki Japan (Connector Clips),Nick Green,6224,Plastics,Japan,2
+303,Y14,Yamashita Hoses,NO LONGER USED,null,Rubber,Japan,8
+304,null,Nippon (NEUK),All,null,CKD,UK,All
