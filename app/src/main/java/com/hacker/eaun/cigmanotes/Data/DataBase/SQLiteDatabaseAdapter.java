@@ -1,7 +1,7 @@
 package com.hacker.eaun.cigmanotes.Data.DataBase;
 
 
-/**
+/*
  * Created by Eaun-Ballinger on 28/07/2016.
  * Help Control and modify the Sqlite database
  * Cigma Functions / WMS

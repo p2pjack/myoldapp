@@ -1,34 +1,55 @@
 package com.hacker.eaun.cigmanotes.ui.splash;
 
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
+import com.hacker.eaun.cigmanotes.R;
+import com.hacker.eaun.cigmanotes.core.MainActivity;
+
 import me.wangyuwei.particleview.ParticleView;
 
-import com.hacker.eaun.cigmanotes.core.MainActivity;
-import com.hacker.eaun.cigmanotes.R;
-import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
-
 public class SplashActivity extends AppCompatActivity {
-
+    private static String TAG = "Main Intro";
     private ParticleView mPv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        LoadSplashOnce();
 
-        SQLiteDatabaseAdapter db = SQLiteDatabaseAdapter.getInstance(this);
-        db.CSV();
-        ani1();
-        StartAnimations();
-        ani2();
+    }
+
+    private void LoadSplashOnce() {
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean("bol_key_first", true)) {
+            SQLiteDatabaseAdapter db = SQLiteDatabaseAdapter.getInstance(this);
+            db.CSV();
+            ani1();
+            StartAnimations();
+            ani2();
+        } else if (prefs.getBoolean("bol_key_first", true)) {
+            GoToMain();
+        }
+    }
+
+    private void GoToMain() {
+        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+        startActivity(intent);
+        Log.d(TAG, "Intro Finished");
+        finish();
     }
 
 
