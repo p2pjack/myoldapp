@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes;
+package com.hacker.eaun.cigmanotes.ui.Note_UI;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -12,8 +12,9 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import com.hacker.eaun.cigmanotes.adapters.MyNoteAdapter;
-import com.hacker.eaun.cigmanotes.adapters.SQLiteDatabaseAdapter;
+
+import com.hacker.eaun.cigmanotes.R;
+import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.vstechlab.easyfonts.EasyFonts;
 import java.util.Objects;
@@ -21,13 +22,13 @@ import java.util.Objects;
 
 public class NoteActivity extends AppCompatActivity {
 
+    public String TABLE = "MyNotes";
+    public String NEW_ID;
     private EditText TITLE;
     private EditText MESSAGE;
     private Button ADD,UPDATE,DELETE,SHOW;
     private String Title,Message,NOTE_TITLE;
     private int SwitchMode;
-    public String TABLE = "MyNotes";
-    public String NEW_ID;
     private SQLiteDatabaseAdapter db;
 
     @Override

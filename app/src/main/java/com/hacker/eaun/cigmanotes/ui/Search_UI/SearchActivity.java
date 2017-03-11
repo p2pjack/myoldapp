@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes;
+package com.hacker.eaun.cigmanotes.ui.Search_UI;
 
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
@@ -11,15 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-import com.hacker.eaun.cigmanotes.adapters.SearchAdapterRecyclerView;
-import com.hacker.eaun.cigmanotes.adapters.SQLiteDatabaseAdapter;
+import com.hacker.eaun.cigmanotes.R;
+import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 
 public class SearchActivity extends AppCompatActivity  {
 
+    public String SEARCH, ROW;
     private SQLiteDatabaseAdapter db;
     private EditText SUPPLIER;
     private EditText CODE;
-    public String SEARCH,ROW;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

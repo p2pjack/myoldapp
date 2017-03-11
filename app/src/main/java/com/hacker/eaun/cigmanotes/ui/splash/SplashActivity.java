@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.splash;
+package com.hacker.eaun.cigmanotes.ui.splash;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -10,9 +10,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import me.wangyuwei.particleview.ParticleView;
-import com.hacker.eaun.cigmanotes.MainActivity;
+
+import com.hacker.eaun.cigmanotes.core.MainActivity;
 import com.hacker.eaun.cigmanotes.R;
-import com.hacker.eaun.cigmanotes.adapters.SQLiteDatabaseAdapter;
+import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 
 public class SplashActivity extends AppCompatActivity {
 

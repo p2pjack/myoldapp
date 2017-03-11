@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes;
+package com.hacker.eaun.cigmanotes.ui.Tools_UI;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -15,8 +15,10 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import com.hacker.eaun.cigmanotes.adapters.FileChooser;
-import com.hacker.eaun.cigmanotes.adapters.SQLiteDatabaseAdapter;
+import com.hacker.eaun.cigmanotes.R;
+import com.hacker.eaun.cigmanotes.Utils.FileChooser;
+import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
+import com.hacker.eaun.cigmanotes.ui.Calculator.CalculatorActivity;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.vstechlab.easyfonts.EasyFonts;
 
@@ -27,13 +29,13 @@ import java.util.List;
 
 public class ToolsActivity extends AppCompatActivity {
 
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
     private SQLiteDatabaseAdapter db;
     private Button mGET_CVS,mEXPORT_CVS,mCALCULATOR,mLAUNCH_CALCULATOR;
     private String mTABLE;
     private String mfilename;
     private RadioButton mWMS,mCIGMA,mSUPPLIERS;
     private int mROWS = 3;
-    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

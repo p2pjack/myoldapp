@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes;
+package com.hacker.eaun.cigmanotes.core.listeners;
 
 import android.app.Activity;
 import android.content.Context;

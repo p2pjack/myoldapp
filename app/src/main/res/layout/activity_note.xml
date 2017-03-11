@@ -2,119 +2,119 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_note"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.hacker.eaun.cigmanotes.NoteActivity"
     android:background="@color/colorPrimary"
-    android:id="@+id/activity_note">
+    android:fitsSystemWindows="true"
+    tools:context="com.hacker.eaun.cigmanotes.ui.Note_UI.NoteActivity">
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/lay_out_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lay_out_top"
-        android:elevation="30dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:background="@color/colorPrimary"
         android:layout_marginTop="4dp"
-        android:layout_centerHorizontal="true">
+        android:background="@color/colorPrimary"
+        android:elevation="30dp"
+        android:orientation="vertical">
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/editText_TITLE"
-            android:textColor="@color/TextColourWhite"
-            android:hint="@string/title"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:singleLine="true"
-            android:inputType="textCapSentences|text"
-            android:layout_weight="1"
-            android:layout_margin="8dp"
-            android:elegantTextHeight="false"
-            android:ellipsize="middle"/>
-
-        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textCapSentences|textMultiLine"
-            android:ems="10"
-            android:id="@+id/editText_DESCRIPTION"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textColor="@color/TextColourWhite"
-            android:hint="@string/description"
-            android:textStyle="bold"
-            android:singleLine="false"
-            android:layout_weight="1"
             android:layout_margin="8dp"
-            android:ellipsize="middle"/>
+            android:layout_weight="1"
+            android:elegantTextHeight="false"
+            android:ellipsize="middle"
+            android:hint="@string/title"
+            android:inputType="textCapSentences|text"
+            android:singleLine="true"
+            android:textColor="@color/TextColourWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText_DESCRIPTION"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:ellipsize="middle"
+            android:ems="10"
+            android:hint="@string/description"
+            android:inputType="textCapSentences|textMultiLine"
+            android:singleLine="false"
+            android:textColor="@color/TextColourWhite"
+            android:textSize="25sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/linearLayout8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lay_out_top"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="4dp"
-        android:elevation="20dp"
-        android:id="@+id/linearLayout8"
+        android:layout_below="@+id/lay_out_top"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:background="@color/colorPrimary">
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        android:elevation="20dp"
+        android:orientation="horizontal">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ADD"
             android:id="@+id/button_add"
-            android:layout_weight=".5"
-            android:background="@color/colorPrimary"
-            android:textStyle="bold"
-            android:textColor="@color/TextColourWhite"/>
-
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DELETE"
-            android:id="@+id/button_delete"
             android:layout_weight=".5"
             android:background="@color/colorPrimary"
-            android:textStyle="bold"
-            android:textColor="@color/TextColourWhite"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="UPDATE"
-            android:id="@+id/button_update"
-            android:layout_weight=".5"
-            android:background="@color/colorPrimary"
-            android:textStyle="bold"
-            android:textColor="@color/TextColourWhite"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SHOW"
-            android:id="@+id/button_show"
+            android:text="ADD"
             android:textColor="@color/TextColourWhite"
-            android:textStyle="bold"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
             android:background="@color/colorPrimary"
-            android:layout_weight=".5"/>
+            android:text="DELETE"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:background="@color/colorPrimary"
+            android:text="UPDATE"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:background="@color/colorPrimary"
+            android:text="SHOW"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/linearLayout8"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_marginBottom="4dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:background="@color/colorPrimary"
-        android:layout_marginBottom="4dp">
+        android:background="@color/colorPrimary">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -123,9 +123,9 @@
             >
 
             <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/rv3"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp">
             </android.support.v7.widget.RecyclerView>

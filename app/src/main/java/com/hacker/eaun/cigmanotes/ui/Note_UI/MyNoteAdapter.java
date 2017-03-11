@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.adapters;
+package com.hacker.eaun.cigmanotes.ui.Note_UI;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,9 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.hacker.eaun.cigmanotes.NoteActivity;
+
 import com.hacker.eaun.cigmanotes.R;
-import com.hacker.eaun.cigmanotes.passthrough.NoteGS;
+import com.hacker.eaun.cigmanotes.model.NoteGS;
 import java.util.List;
 
 /**
@@ -19,7 +19,7 @@ import java.util.List;
  *
  */
 
-public class MyNoteAdapter extends RecyclerView.Adapter<MyNoteAdapter.DatabaseViewHolder> {
+public class MyNoteAdapter extends RecyclerView.Adapter<MyNoteAdapter.NoteViewHolder> {
     private ThreadLocal<List<NoteGS>> DatabaseList;
     private String GetMyId;
     private Context mContext;
@@ -30,37 +30,17 @@ public class MyNoteAdapter extends RecyclerView.Adapter<MyNoteAdapter.DatabaseVi
         this.mContext = pContext;
     }
 
-    class DatabaseViewHolder extends RecyclerView.ViewHolder {
-        TextView vFirstTitle;
-        TextView vMessage;
-        String vID;
-
-        DatabaseViewHolder(View v) {
-            super(v);
-            vFirstTitle = (TextView) v.findViewById(R.id.note_title);
-            vMessage = (TextView) v.findViewById(R.id.note_message);
-
-            v.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View pView) {
-                    GetMyId = vID;
-                    OpenDetails(GetMyId);
-                }
-            });
-        }
-    }
-
     @Override
-    public DatabaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NoteViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v;
         v = LayoutInflater.
                 from(parent.getContext()).
                 inflate(R.layout.note_card_view_layout, parent, false);
-        return new DatabaseViewHolder(v);
+        return new NoteViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(DatabaseViewHolder holder, int position)  {
+    public void onBindViewHolder(NoteViewHolder holder, int position) {
         NoteGS ci = DatabaseList.get().get(position);
         holder.vFirstTitle.setText(ci.getTITLE());
         holder.vMessage.setText(ci.getNOTE());
@@ -77,5 +57,25 @@ public class MyNoteAdapter extends RecyclerView.Adapter<MyNoteAdapter.DatabaseVi
         args.putInt("MY_ID", Integer.parseInt(item));
         intent.putExtras(args);
         mContext.startActivity(intent);
+    }
+
+    class NoteViewHolder extends RecyclerView.ViewHolder {
+        TextView vFirstTitle;
+        TextView vMessage;
+        String vID;
+
+        NoteViewHolder(View v) {
+            super(v);
+            vFirstTitle = (TextView) v.findViewById(R.id.note_title);
+            vMessage = (TextView) v.findViewById(R.id.note_message);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View pView) {
+                    GetMyId = vID;
+                    OpenDetails(GetMyId);
+                }
+            });
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.passthrough;
+package com.hacker.eaun.cigmanotes.model;
 
 /**
  * Created by Eaun-Ballinger on 23/08/2016.

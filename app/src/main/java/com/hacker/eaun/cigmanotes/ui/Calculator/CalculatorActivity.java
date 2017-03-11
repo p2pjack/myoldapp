@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes;
+package com.hacker.eaun.cigmanotes.ui.Calculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.hacker.eaun.cigmanotes.R;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.vstechlab.easyfonts.EasyFonts;
 

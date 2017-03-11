@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes;
+package com.hacker.eaun.cigmanotes.core;
 
 /**
  * Created by Eaun-Ballinger on 28/07/2016.
@@ -64,22 +64,27 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.hacker.eaun.cigmanotes.adapters.MyAdapter;
-import com.hacker.eaun.cigmanotes.adapters.SQLiteDatabaseAdapter;
-import com.hacker.eaun.cigmanotes.prefs.AppPreferences;
+
+import com.hacker.eaun.cigmanotes.ui.Note_UI.NoteActivity;
+import com.hacker.eaun.cigmanotes.R;
+import com.hacker.eaun.cigmanotes.ui.Search_UI.SearchActivity;
+import com.hacker.eaun.cigmanotes.ui.Tools_UI.ToolsActivity;
+import com.hacker.eaun.cigmanotes.ui.MyAdapter;
+import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
+import com.hacker.eaun.cigmanotes.Utils.prefs.AppPreferences;
 import com.sdsmdg.tastytoast.TastyToast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener
 {
-    private Boolean isFabOpen = false;
-    private FloatingActionButton fab,fab1,fab2;
-    private Animation fab_open,fab_close,rotate_forward,rotate_backward;
-    private SQLiteDatabaseAdapter db;
     public String TABLE = "Cigma";
     public MyAdapter ca;
     public RecyclerView recList;
     public TextView FLOAT,FLOAT1;
+    private Boolean isFabOpen = false;
+    private FloatingActionButton fab, fab1, fab2;
+    private Animation fab_open, fab_close, rotate_forward, rotate_backward;
+    private SQLiteDatabaseAdapter db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

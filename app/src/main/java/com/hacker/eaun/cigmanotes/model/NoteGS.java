@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.passthrough;
+package com.hacker.eaun.cigmanotes.model;
 
 
 /**

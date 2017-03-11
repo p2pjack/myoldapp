@@ -1,397 +1,397 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/colorAccent">
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.hacker.eaun.cigmanotes.CalculatorActivity"
-    android:background="@color/colorAccent">
+    android:background="@color/colorAccent"
+    tools:context="com.hacker.eaun.cigmanotes.ui.Calculator.CalculatorActivity">
 
     <TextView
+        android:id="@+id/textview_output"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textview_output"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:textAlignment="center"
-        android:textColor="@color/TextColourWhite"
         android:background="@color/colorAccent"
-        android:elevation="15dp"/>
+        android:elevation="15dp"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/TextColourWhite" />
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/linearLayout16"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textview_output"
         android:layout_alignStart="@+id/textview_output"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorAccent"
+        android:layout_below="@+id/textview_output"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
         android:elevation="15dp"
-        android:id="@+id/linearLayout16">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp">
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="Pallet Size "
+                android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView9"
-                android:textStyle="normal|bold"
+                android:layout_marginLeft="4dp"
+                android:text="Pallet Size "
                 android:textAlignment="center"
                 android:textColor="@color/TextColourWhite"
                 android:textSize="18sp"
-                android:layout_marginLeft="4dp"/>
+                android:textStyle="normal|bold" />
 
             <Spinner
+                android:id="@+id/spinner_receiving"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner_receiving"
-                android:layout_weight="1"
-                android:layout_marginRight="4dp"/>
+                android:layout_marginRight="4dp"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
-            android:id="@+id/linearLayout15"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Number Of Pallets"
-                android:id="@+id/textView8"
-                android:textStyle="bold"
-                android:textColor="@color/TextColourWhite"
                 android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:text="Number Of Pallets"
                 android:textAlignment="center"
-                android:layout_weight="1"/>
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/editText_PALLETS"
                 android:layout_width="151dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"
                 android:ems="10"
-                android:id="@+id/editText_PALLETS"
-                android:textStyle="bold"
+                android:hint="26 Pallets"
+                android:inputType="number"
                 android:textColor="@color/TextColourWhite"
-                android:hint="26 Pallets"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout14"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="53dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Length Of Time to \n Process Delivery"
-                android:id="@+id/textView7"
-                android:textColor="@color/TextColourWhite"
-                android:textStyle="bold"
                 android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:text="Length Of Time to \n Process Delivery"
                 android:textAlignment="center"
-                android:layout_weight="1"/>
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/editText_TIME"
                 android:layout_width="151dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:id="@+id/editText_TIME"
-                android:textStyle="bold"
-                android:textColor="@color/TextColourWhite"
+                android:hint="75 Minutes"
                 android:inputType="number"
-                android:hint="75 Minutes"/>
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="21dp"
-            android:id="@+id/linearLayout13"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
-            android:layout_weight="1">
+            android:layout_marginTop="21dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Number Of Loads"
-                android:id="@+id/textView3"
-                android:textStyle="bold"
-                android:textColor="@color/TextColourWhite"
-                android:textAlignment="center"
                 android:layout_marginLeft="4dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:text="Number Of Loads"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/editText_LOADS"
                 android:layout_width="151dp"
                 android:layout_height="wrap_content"
-                android:inputType="number"
                 android:ems="10"
-                android:id="@+id/editText_LOADS"
-                android:textStyle="bold"
+                android:hint="20 Delivery&apos;s"
+                android:inputType="number"
                 android:textColor="@color/TextColourWhite"
-                android:hint="20 Delivery&apos;s"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="@color/colorAccent"
-            android:id="@+id/linearLayout12"
+            android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:focusableInTouchMode="false"
+            android:layout_marginTop="8dp"
             android:layout_weight="1"
+            android:background="@color/colorAccent"
             android:elevation="25dp"
-            android:layout_marginBottom="8dp">
+            android:focusableInTouchMode="false"
+            android:orientation="horizontal">
 
             <Button
+                android:id="@+id/button_RECEIVING"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RECEIVING SPACE"
-                android:id="@+id/button_RECEIVING"
+                android:layout_weight="1"
                 android:background="@color/colorAccent"
-                android:textStyle="bold"
-                android:textColor="@color/TextColourWhite"
-                android:textAlignment="center"
                 android:singleLine="false"
-                android:layout_weight="1"/>
+                android:text="RECEIVING SPACE"
+                android:textAlignment="center"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/linearLayout16"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="4dp"
+        android:layout_marginTop="10dp"
         android:background="@color/colorAccent"
-        android:focusable="false"
         android:elevation="15dp"
-        android:layout_alignParentEnd="true">
+        android:focusable="false"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
-            android:baselineAligned="false"
-            android:focusableInTouchMode="false"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:background="@color/colorAccent"
+            android:baselineAligned="false"
             android:elevation="30dp"
             android:focusable="false"
-            android:layout_margin="8dp"
-            android:layout_marginBottom="8dp">
+            android:focusableInTouchMode="false"
+            android:orientation="horizontal">
 
             <Button
+                android:id="@+id/button_Floor"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FLOOR SPACE"
-                android:id="@+id/button_Floor"
-                android:textStyle="bold"
-                android:textColor="@color/TextColourWhite"
                 android:layout_weight="1"
-                android:singleLine="false"
-                android:textAlignment="center"
-                android:background="@color/colorAccent"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="57dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="How Many Pallets \n High"
-                android:id="@+id/textView16"
-                android:layout_weight="1"
-                android:textColor="@color/TextColourWhite"
-                android:textStyle="bold"
-                android:singleLine="false"
-                android:textAlignment="center"/>
-
-            <EditText
-                android:layout_width="151dp"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText_stacked_high"
-                android:layout_weight=".5"
-                android:textColor="@color/TextColourWhite"
-                android:textStyle="bold"
-                android:hint="3 Stacked Pallets"
-                android:textAlignment="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="57dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="How Many Pallets \n Deep"
-                android:layout_weight="1"
-                android:textColor="@color/TextColourWhite"
-                android:textStyle="bold"
-                android:singleLine="false"
-                android:textAlignment="center"/>
-
-            <EditText
-                android:layout_width="151dp"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/editText_floor_depth"
-                android:layout_weight=".5"
-                android:textColor="@color/TextColourWhite"
-                android:textStyle="bold"
-                android:hint="20 Pallets Deep"
-                android:textAlignment="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Pallet Size"
-                android:id="@+id/textView17"
-                android:layout_weight="5"
-                android:textStyle="bold"
-                android:textColor="@color/TextColourWhite"
-                android:textAlignment="center"
-                android:elevation="14dp"
                 android:background="@color/colorAccent"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"/>
+                android:singleLine="false"
+                android:text="FLOOR SPACE"
+                android:textAlignment="center"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-            <Spinner
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:singleLine="false"
+                android:text="How Many Pallets \n High"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_stacked_high"
+                android:layout_width="151dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner_floor"
-                android:spinnerMode="dropdown"
                 android:layout_weight=".5"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"/>
+                android:ems="10"
+                android:hint="3 Stacked Pallets"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:singleLine="false"
+                android:text="How Many Pallets \n Deep"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_floor_depth"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:ems="10"
+                android:hint="20 Pallets Deep"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="5"
+                android:background="@color/colorAccent"
+                android:elevation="14dp"
+                android:text="Pallet Size"
+                android:textAlignment="center"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Fork Lift Type"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_floor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight=".5"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
                 android:id="@+id/textView18"
-                android:textColor="@color/TextColourWhite"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:elevation="14dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
-                android:background="@color/colorPrimary"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"/>
-
-            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner_forklift"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:spinnerMode="dropdown"
                 android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"/>
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:elevation="14dp"
+                android:text="Fork Lift Type"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_forklift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="8dp"
+                android:spinnerMode="dropdown" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Usage Rate in percentage"
-                android:id="@+id/textView15"
-                android:textColor="@color/TextColourWhite"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:elevation="14dp"
-                android:background="@color/colorPrimary"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"/>
+                android:background="@color/colorPrimary"
+                android:elevation="14dp"
+                android:text="Usage Rate in percentage"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
 
             <Spinner
+                android:id="@+id/spinner_rate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinner_rate"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginRight="4dp"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginTop="8dp" />
 
         </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.prefs;
+package com.hacker.eaun.cigmanotes.Utils.prefs;
 
 /**
  * Settings preferences go here

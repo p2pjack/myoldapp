@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.adapters;
+package com.hacker.eaun.cigmanotes.ui.Search_UI;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.hacker.eaun.cigmanotes.R;
-import com.hacker.eaun.cigmanotes.passthrough.MyNotesGS;
+import com.hacker.eaun.cigmanotes.model.MyNotesGS;
 import java.util.List;
 
 /**
@@ -27,30 +27,6 @@ public class SearchAdapterRecyclerView extends
 
     @Override
     public int getItemCount(){return DatabaseList.get().size();}
-
-    public class SearchView extends RecyclerView.ViewHolder {
-
-        TextView vSupplierCode;
-        TextView vSupplier;
-        TextView vPlanner;
-        TextView vPhoneNumber;
-        TextView vType;
-        TextView vCountry;
-        TextView vParts;
-
-
-        public SearchView(View v) {
-            super(v);
-
-            vSupplierCode = (TextView) v.findViewById(R.id.id_Title_cs);
-            vSupplier = (TextView) v.findViewById(R.id.id_supplier_cs);
-            vPlanner = (TextView) v.findViewById(R.id.id_planner_cs);
-            vPhoneNumber = (TextView) v.findViewById(R.id.id_phone_cs);
-            vType = (TextView)v.findViewById(R.id.id_type_cs);
-            vCountry =(TextView)v.findViewById(R.id.id_Country_cs);
-            vParts = (TextView)v.findViewById(R.id.id_parts_cs);
-        }
-    }
 
     @Override
     public SearchView onCreateViewHolder(ViewGroup viewGroup, int viewType) {
@@ -76,5 +52,29 @@ public class SearchAdapterRecyclerView extends
     @Override
     public int getItemViewType(int position) {
         return position;
+    }
+
+    public class SearchView extends RecyclerView.ViewHolder {
+
+        TextView vSupplierCode;
+        TextView vSupplier;
+        TextView vPlanner;
+        TextView vPhoneNumber;
+        TextView vType;
+        TextView vCountry;
+        TextView vParts;
+
+
+        public SearchView(View v) {
+            super(v);
+
+            vSupplierCode = (TextView) v.findViewById(R.id.id_Title_cs);
+            vSupplier = (TextView) v.findViewById(R.id.id_supplier_cs);
+            vPlanner = (TextView) v.findViewById(R.id.id_planner_cs);
+            vPhoneNumber = (TextView) v.findViewById(R.id.id_phone_cs);
+            vType = (TextView) v.findViewById(R.id.id_type_cs);
+            vCountry = (TextView) v.findViewById(R.id.id_Country_cs);
+            vParts = (TextView) v.findViewById(R.id.id_parts_cs);
+        }
     }
 }

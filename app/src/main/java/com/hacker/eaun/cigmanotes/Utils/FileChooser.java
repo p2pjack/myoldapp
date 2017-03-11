@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.adapters;
+package com.hacker.eaun.cigmanotes.Utils;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -36,19 +36,6 @@ public class FileChooser {
 
     // filter on file extension
     private String extension = null;
-    public void setExtension(String extension) {
-        this.extension = (extension == null) ? null :
-                extension.toLowerCase();
-    }
-
-    // file selection event handling
-    public interface FileSelectedListener {
-        void fileSelected(File file);
-    }
-    public FileChooser setFileListener(FileSelectedListener fileListener) {
-        this.fileListener = fileListener;
-        return this;
-    }
     private FileSelectedListener fileListener;
 
     @SuppressWarnings("ConstantConditions")
@@ -75,9 +62,20 @@ public class FileChooser {
         refresh(Environment.getExternalStorageDirectory());
     }
 
+    public void setExtension(String extension) {
+        this.extension = (extension == null) ? null :
+                extension.toLowerCase();
+    }
+
+    public FileChooser setFileListener(FileSelectedListener fileListener) {
+        this.fileListener = fileListener;
+        return this;
+    }
+
     public void showDialog() {
         dialog.show();
     }
+
     /**
      * Sort, filter and display the files for the given path.
      */
@@ -125,6 +123,7 @@ public class FileChooser {
                 });
         }
     }
+
     /**
      * Convert a relative filename into an actual File object.
      */
@@ -134,5 +133,10 @@ public class FileChooser {
         } else {
             return new File(currentPath, fileChosen);
         }
+    }
+
+    // file selection event handling
+    public interface FileSelectedListener {
+        void fileSelected(File file);
     }
 }

@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.adapters;
+package com.hacker.eaun.cigmanotes.ui;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -6,7 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.hacker.eaun.cigmanotes.passthrough.MyNotesGS;
+
+import com.hacker.eaun.cigmanotes.model.MyNotesGS;
 import java.util.List;
 import static com.hacker.eaun.cigmanotes.R.*;
 
@@ -29,26 +30,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.DatabaseViewHolder
         return DatabaseList.get().size();
     }
 
-    class DatabaseViewHolder extends RecyclerView.ViewHolder {
-
-        TextView vAction;
-        TextView vFirstTitle;
-        TextView vMessage;
-        String vID;
-
-        DatabaseViewHolder(View v) {
-            super(v);
-            vAction = (TextView) v.findViewById(id.txtActions);
-            vFirstTitle = (TextView) v.findViewById(id.txtTitle);
-            vMessage = (TextView) v.findViewById(id.txtMessage);
-
-            v.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                }
-            });
-        }
-    }
     //Create new views (invoked by the layout manager)
     @Override
     public DatabaseViewHolder onCreateViewHolder(ViewGroup viewGroup,int viewType) {
@@ -71,6 +52,27 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.DatabaseViewHolder
     @Override
     public int getItemViewType(int position) {
         return position;
+    }
+
+    class DatabaseViewHolder extends RecyclerView.ViewHolder {
+
+        TextView vAction;
+        TextView vFirstTitle;
+        TextView vMessage;
+        String vID;
+
+        DatabaseViewHolder(View v) {
+            super(v);
+            vAction = (TextView) v.findViewById(id.txtActions);
+            vFirstTitle = (TextView) v.findViewById(id.txtTitle);
+            vMessage = (TextView) v.findViewById(id.txtMessage);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                }
+            });
+        }
     }
 
 }

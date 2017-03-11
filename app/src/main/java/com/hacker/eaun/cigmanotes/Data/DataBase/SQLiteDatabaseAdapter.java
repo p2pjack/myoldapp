@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.adapters;
+package com.hacker.eaun.cigmanotes.Data.DataBase;
 
 
 /**
@@ -17,8 +17,8 @@ import android.os.Environment;
 import android.os.Process;
 import android.util.Log;
 import com.hacker.eaun.cigmanotes.R;
-import com.hacker.eaun.cigmanotes.passthrough.MyNotesGS;
-import com.hacker.eaun.cigmanotes.passthrough.NoteGS;
+import com.hacker.eaun.cigmanotes.model.MyNotesGS;
+import com.hacker.eaun.cigmanotes.model.NoteGS;
 import com.opencsv.CSVWriter;
 import java.io.BufferedReader;
 import java.io.File;
@@ -34,35 +34,40 @@ import java.util.List;
 
 public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
 
-    @SuppressLint("StaticFieldLeak")
-    private static SQLiteDatabaseAdapter mInstance;
-
-    // public Values for database
-    private String COL_1 = "_id";
-    private String COL_2 = "Actions";
-    private String COL_3 = "Title";
-    private String COL_4 = "Message";
-    private String COL_5 = "Code";
-    private String COL_6 = "Supplier";
-    private SQLiteDatabase WritableDatabase;
-
     // private static values
     private static final int DATABASE_VERSION = 1;
     private static final String TABLE_CIGMA = "Cigma";
     private static final String TABLE_WMS = "WMS";
     private static final String TABLE_SUPPLIERS = "Suppliers";
+    @SuppressLint("StaticFieldLeak")
+    private static SQLiteDatabaseAdapter mInstance;
+    // public Values for database
+    private String COL_1 = "_id";
+    private String COL_2 = "Actions";
+    private String COL_3 = "Title";
+    private String COL_4 = "Message";
     private final String CREATE_TABLE_ONE = "CREATE TABLE " + TABLE_CIGMA + "( " + COL_1 +
             " INTEGER PRIMARY KEY AUTOINCREMENT," + COL_2 + " TEXT ," + COL_3 + " TEXT," +
             COL_4 + " TEXT)";
     private final String CREATE_TABLE_TWO = "CREATE TABLE " + TABLE_WMS + "( " + COL_1 +
             " INTEGER PRIMARY KEY AUTOINCREMENT," + COL_2 + " TEXT ," + COL_3 + " TEXT," + COL_4 +
             " TEXT)";
+    private String COL_5 = "Code";
+    private String COL_6 = "Supplier";
     private final String CREATE_TABLE_THREE = "CREATE TABLE " + TABLE_SUPPLIERS + "(" + COL_1 +
             " INTEGER," + COL_6 + " TEXT ," + COL_5 +
             " TEXT ,Planner TEXT,Phone TEXT,Type TEXT,Country TEXT,Parts TEXT)";
+    private SQLiteDatabase WritableDatabase;
     private Context context;
     private String TAG = "DB_Adapter";
     private boolean databaseCreated = false;
+
+    private SQLiteDatabaseAdapter(Context context) {
+        super(context, "Notes.db", null, DATABASE_VERSION);
+        this.context = context;
+        Log.d(TAG, "Result : " + databaseCreated);
+        WritableDatabase = this.getWritableDatabase();
+    }
 
     // Plug a leak use getInstance(this); to get state true / false
     public static synchronized SQLiteDatabaseAdapter getInstance(Context ctx) {
@@ -70,14 +75,6 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
             mInstance = new SQLiteDatabaseAdapter(ctx.getApplicationContext());
         }
         return mInstance;
-    }
-
-
-    private SQLiteDatabaseAdapter(Context context) {
-        super(context, "Notes.db", null, DATABASE_VERSION);
-        this.context = context;
-        Log.d(TAG, "Result : " + databaseCreated);
-        WritableDatabase = this.getWritableDatabase();
     }
 
     @Override
@@ -116,6 +113,149 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
         new DatabaseInsert(TITLE, MESSAGE).start();
     }
 
+    // UPDATE
+    public void Update(String id, String title, String message) {
+        new DatabaseUpdate(id, title, message).start();
+    }
+
+    // DELETE
+    public void Delete(String id) {
+        new DatabaseDelete(id).start();
+    }
+
+    public void DeleteAll(String TABLE) {
+        new DeleteAll(TABLE).start();
+    }
+
+    public Cursor FillTheTextView(String TABLE, String ID) {
+        return WritableDatabase.rawQuery("SELECT * FROM " + TABLE + " WHERE _id =" + ID, null);
+    }
+
+    // Pre fill the database
+    public void CSV() {
+        new WriteCSVtoDatabase().start();
+    }
+
+    // Getting All Cigma WMS Notes
+    public List<MyNotesGS> getAllContacts(String TABLE) {
+
+        List<MyNotesGS> NoteList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE;
+        Cursor cursor = WritableDatabase.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                MyNotesGS notes = new MyNotesGS();
+                notes.setid(cursor.getString(0));
+                notes.setAction(cursor.getString(1));
+                notes.setTitle(cursor.getString(2));
+                notes.setMessage(cursor.getString(3));
+                // Adding contact to list
+                NoteList.add(notes);
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
+        // return list
+        return NoteList;
+    }
+
+    // Getting single
+    public List<MyNotesGS> getSupplierCode(String SEARCH, String ROW) {
+        List<MyNotesGS> Notes = new ArrayList<>();
+        Cursor cursor = WritableDatabase.rawQuery("SELECT * FROM Suppliers WHERE " + ROW + " LIKE " +
+                "'%" + SEARCH + "%'", null);
+        if (cursor.moveToFirst()) {
+            do {
+                MyNotesGS notes = new MyNotesGS();
+                notes.setid(cursor.getString(0));
+                notes.setCode(cursor.getString(1));
+                notes.setSupplier(cursor.getString(2));
+                notes.setPlanner(cursor.getString(3));
+                notes.setPhone(cursor.getString(4));
+                notes.setCountry(cursor.getString(5));
+                notes.setType(cursor.getString(6));
+                notes.setParts(cursor.getString(7));
+                // Adding contact to list
+                Notes.add(notes);
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
+        return Notes;
+    }
+
+//    public Cursor FillTextView(String TABLE, String ID){
+//     Cursor cursor = new Cursor(new FillTheView(TABLE,ID).start());
+//
+//        return cursor;
+//    }
+//
+//    private class FillTheView extends Thread{
+//        String table;
+//        String id;
+//        FillTheView(String Table,String Id){this.table = Table;this.id = Id;}
+//
+//        @Override
+//        public void run() {
+//            WritableDatabase.rawQuery("SELECT * FROM " + table + " WHERE _id =" + id, null);
+//        }
+//    }
+
+    // Getting All Notes
+    public List<NoteGS> getAllNotes(String TABLE) {
+        List<NoteGS> NoteList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE;
+        Cursor cursor = WritableDatabase.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                NoteGS notes = new NoteGS();
+                notes.setID(Integer.parseInt(cursor.getString(0)));
+                notes.setTITLE(cursor.getString(1));
+                notes.setNOTE(cursor.getString(2));
+                // Adding contact to list
+                NoteList.add(notes);
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
+        // return Note list
+        return NoteList;
+    }
+
+    public void CSVReader(String file, String TABLE, int row) {
+        new CSVReader(file, TABLE, row).start();
+    }
+
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    public void exportDB() {
+        File directoryDownload =
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+        File exportDir = new File(directoryDownload, "CVS EXPORT");
+        if (!exportDir.exists()) {
+            exportDir.mkdirs();
+        }
+
+        File file = new File(exportDir, "MyNoTes.csv");
+        try {
+            file.createNewFile();
+            CSVWriter csvWrite = new CSVWriter(new FileWriter(file));
+            Cursor curCSV = WritableDatabase.rawQuery("SELECT * FROM MyNotes", null);
+            csvWrite.writeNext(curCSV.getColumnNames());
+            while (curCSV.moveToNext()) {
+                //Which column you want to export
+                String arrStr[] = {curCSV.getString(0), curCSV.getString(1), curCSV.getString(2)};
+                csvWrite.writeNext(arrStr);
+            }
+            csvWrite.close();
+            curCSV.close();
+        } catch (Exception sqlEx) {
+            Log.e("Database ", sqlEx.getMessage(), sqlEx);
+        }
+    }
+
     private class DatabaseInsert extends Thread {
         String NOTE;
         String MESSAGE;
@@ -132,11 +272,6 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
 
             WritableDatabase.execSQL("INSERT OR REPLACE INTO MyNotes(Title,Notes)VALUES(?,?)",args);
         }
-    }
-
-    // UPDATE
-    public void Update(String id, String title, String message) {
-        new DatabaseUpdate(id, title, message).start();
     }
 
     private class DatabaseUpdate extends Thread {
@@ -161,11 +296,6 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
         }
     }
 
-    // DELETE
-    public void Delete(String id) {
-        new DatabaseDelete(id).start();
-    }
-
     private class DatabaseDelete extends Thread {
         String id;
 
@@ -180,9 +310,6 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
         }
     }
 
-    public void DeleteAll(String TABLE){new DeleteAll(TABLE).start();
-    }
-
     private class DeleteAll extends Thread{
         String table;
         DeleteAll(String delete){this.table = delete;}
@@ -193,31 +320,6 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
             WritableDatabase.delete(table,null,null);
             WritableDatabase.execSQL("vacuum");
         }
-    }
-
-//    public Cursor FillTextView(String TABLE, String ID){
-//     Cursor cursor = new Cursor(new FillTheView(TABLE,ID).start());
-//
-//        return cursor;
-//    }
-//
-//    private class FillTheView extends Thread{
-//        String table;
-//        String id;
-//        FillTheView(String Table,String Id){this.table = Table;this.id = Id;}
-//
-//        @Override
-//        public void run() {
-//            WritableDatabase.rawQuery("SELECT * FROM " + table + " WHERE _id =" + id, null);
-//        }
-//    }
-
-    public Cursor FillTheTextView(String TABLE, String ID) {
-        return WritableDatabase.rawQuery("SELECT * FROM " + TABLE + " WHERE _id =" + ID, null);
-    }
-    // Pre fill the database
-    public void CSV(){
-        new WriteCSVtoDatabase().start();
     }
 
     private class WriteCSVtoDatabase extends Thread {
@@ -319,83 +421,6 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
         }
     }
 
-    // Getting All Cigma WMS Notes
-    public List<MyNotesGS> getAllContacts(String TABLE) {
-
-        List<MyNotesGS> NoteList = new ArrayList<>();
-        // Select All Query
-        String selectQuery = "SELECT  * FROM " + TABLE;
-        Cursor cursor = WritableDatabase.rawQuery(selectQuery, null);
-
-        // looping through all rows and adding to list
-        if (cursor.moveToFirst()) {
-            do {
-                MyNotesGS notes = new MyNotesGS();
-                notes.setid(cursor.getString(0));
-                notes.setAction(cursor.getString(1));
-                notes.setTitle(cursor.getString(2));
-                notes.setMessage(cursor.getString(3));
-                // Adding contact to list
-                NoteList.add(notes);
-            } while (cursor.moveToNext());
-            cursor.close();
-        }
-        // return list
-        return NoteList;
-    }
-
-
-    // Getting single
-    public List<MyNotesGS> getSupplierCode(String SEARCH,String ROW) {
-        List<MyNotesGS> Notes = new ArrayList<>();
-        Cursor cursor = WritableDatabase.rawQuery("SELECT * FROM Suppliers WHERE "+ROW+" LIKE " +
-                "'%" + SEARCH + "%'", null);
-        if (cursor.moveToFirst()) {
-            do {
-                MyNotesGS notes = new MyNotesGS();
-                notes.setid(cursor.getString(0));
-                notes.setCode(cursor.getString(1));
-                notes.setSupplier(cursor.getString(2));
-                notes.setPlanner(cursor.getString(3));
-                notes.setPhone(cursor.getString(4));
-                notes.setCountry(cursor.getString(5));
-                notes.setType(cursor.getString(6));
-                notes.setParts(cursor.getString(7));
-                // Adding contact to list
-                Notes.add(notes);
-            } while (cursor.moveToNext());
-            cursor.close();
-        }
-        return  Notes;
-    }
-
-    // Getting All Notes
-    public List<NoteGS> getAllNotes(String TABLE) {
-        List<NoteGS> NoteList = new ArrayList<>();
-        // Select All Query
-        String selectQuery = "SELECT  * FROM " + TABLE;
-        Cursor cursor = WritableDatabase.rawQuery(selectQuery, null);
-
-        // looping through all rows and adding to list
-        if (cursor.moveToFirst()) {
-            do {
-                NoteGS notes = new NoteGS();
-                notes.setID(Integer.parseInt(cursor.getString(0)));
-                notes.setTITLE(cursor.getString(1));
-                notes.setNOTE(cursor.getString(2));
-                // Adding contact to list
-                NoteList.add(notes);
-            } while (cursor.moveToNext());
-            cursor.close();
-        }
-        // return Note list
-        return NoteList;
-    }
-
-    public void CSVReader(String file,String TABLE,int row){
-        new CSVReader(file,TABLE,row).start();
-    }
-
     private class CSVReader extends Thread{
 
          String Get_Table;
@@ -465,38 +490,6 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
             }
             WritableDatabase.setTransactionSuccessful();
             WritableDatabase.endTransaction();
-        }
-    }
-
-    @SuppressWarnings("ResultOfMethodCallIgnored")
-    public void exportDB() {
-        File directoryDownload =
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-        File exportDir = new File (directoryDownload, "CVS EXPORT");
-        if (!exportDir.exists())
-        {
-            exportDir.mkdirs();
-        }
-
-        File file = new File(exportDir, "MyNoTes.csv");
-        try
-        {
-            file.createNewFile();
-            CSVWriter csvWrite = new CSVWriter(new FileWriter(file));
-            Cursor curCSV = WritableDatabase.rawQuery("SELECT * FROM MyNotes",null);
-            csvWrite.writeNext(curCSV.getColumnNames());
-            while(curCSV.moveToNext())
-            {
-                //Which column you want to export
-                String arrStr[] ={curCSV.getString(0),curCSV.getString(1), curCSV.getString(2)};
-                csvWrite.writeNext(arrStr);
-            }
-            csvWrite.close();
-            curCSV.close();
-        }
-        catch(Exception sqlEx)
-        {
-            Log.e("Database ", sqlEx.getMessage(), sqlEx);
         }
     }
 }
