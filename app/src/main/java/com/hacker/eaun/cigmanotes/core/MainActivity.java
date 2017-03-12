@@ -48,31 +48,34 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hacker.eaun.cigmanotes.ui.Note_UI.NoteActivity;
+import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 import com.hacker.eaun.cigmanotes.R;
+import com.hacker.eaun.cigmanotes.Utils.prefs.AppPreferences;
+import com.hacker.eaun.cigmanotes.ui.MyAdapter;
+import com.hacker.eaun.cigmanotes.ui.Note_UI.NoteActivity;
 import com.hacker.eaun.cigmanotes.ui.Search_UI.SearchActivity;
 import com.hacker.eaun.cigmanotes.ui.Tools_UI.ToolsActivity;
-import com.hacker.eaun.cigmanotes.ui.MyAdapter;
-import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
-import com.hacker.eaun.cigmanotes.Utils.prefs.AppPreferences;
 import com.sdsmdg.tastytoast.TastyToast;
+
+import shortbread.Shortbread;
+import shortbread.Shortcut;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener
@@ -92,6 +95,9 @@ public class MainActivity extends AppCompatActivity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Shortbread.create(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         db =  SQLiteDatabaseAdapter.getInstance(this);
@@ -246,19 +252,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
        if (id == R.id.nav_notes){
-
-            Intent intent = new Intent(this,NoteActivity.class);
-            startActivity(intent);
-
-            TastyToast.makeText(this,"My Notes Has Been Selected",
-                    TastyToast.LENGTH_SHORT,TastyToast.SUCCESS);
+           OnNotesShortCut();
         }
         else if (id == R.id.nav_tools)
         {
-            Intent intent = new Intent(this,ToolsActivity.class);
-            startActivity(intent);
-            TastyToast.makeText(this,"Tools Selected",
-                    TastyToast.LENGTH_SHORT,TastyToast.SUCCESS);
+            OnToolShortCut();
         }
         else if (id == R.id.nav_share)
         {
@@ -271,16 +269,38 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_supplier_search)
         {
-            TABLE = "Suppliers";
-            Intent intent = new Intent(this,SearchActivity.class);
-            startActivity(intent);
-            TastyToast.makeText(this,"Suppliers has ben selected",
-                    TastyToast.LENGTH_SHORT,TastyToast.SUCCESS);
+            OnSupplierShortCut();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Shortcut(id = "Tools", icon = R.drawable.menu, shortLabel = "Tools items")
+    public void OnToolShortCut() {
+        Intent intent = new Intent(this, ToolsActivity.class);
+        startActivity(intent);
+        TastyToast.makeText(this, "Tools Selected",
+                TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
+    }
+
+    @Shortcut(id = "Search", icon = R.drawable.menu, shortLabel = "Supplier Search")
+    public void OnSupplierShortCut() {
+        TABLE = "Suppliers";
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
+        TastyToast.makeText(this, "Suppliers has ben selected",
+                TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
+    }
+
+    @Shortcut(id = "Notes", icon = R.drawable.menu, shortLabel = "Add a Note")
+    public void OnNotesShortCut() {
+        Intent intent = new Intent(this, NoteActivity.class);
+        startActivity(intent);
+
+        TastyToast.makeText(this, "My Notes Has Been Selected",
+                TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
     }
 
     private void loadPreferences(){

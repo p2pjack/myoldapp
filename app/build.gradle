@@ -37,6 +37,8 @@ dependencies {
     compile 'me.wangyuwei:ParticleView:1.0.1'
     compile 'com.vstechlab.easyfonts:easyfonts:1.0.0'
     compile files('libs/opencsv-3.8.jar')
+    compile 'com.github.matthiasrobbers:shortbread:1.0.1'
+    annotationProcessor 'com.github.matthiasrobbers:shortbread-compiler:1.0.1'
     wearApp project(':mynoteswatch')
     compile 'com.google.android.gms:play-services-base:10.2.0'
     compile 'com.google.android.gms:play-services-wearable:10.2.0'
