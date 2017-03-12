@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recList.setLayoutManager(llm);
-        ca = new MyAdapter(db.getAllContacts(TABLE));
+        ca = new MyAdapter(db.getAllList(TABLE));
         recList.setAdapter(ca);
     }
     // Animation FAB

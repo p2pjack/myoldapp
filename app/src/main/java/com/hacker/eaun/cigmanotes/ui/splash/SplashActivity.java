@@ -20,23 +20,24 @@ import com.hacker.eaun.cigmanotes.core.MainActivity;
 import me.wangyuwei.particleview.ParticleView;
 
 public class SplashActivity extends AppCompatActivity {
-    private static String TAG = "Main Intro";
+    private static String TAG = "Splash Intro";
+    SQLiteDatabaseAdapter db;
     private ParticleView mPv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        db = SQLiteDatabaseAdapter.getInstance(this);
+        db.CSV();
         LoadSplashOnce();
-
     }
 
     private void LoadSplashOnce() {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        if (!prefs.getBoolean("bol_key_first", true)) {
-            SQLiteDatabaseAdapter db = SQLiteDatabaseAdapter.getInstance(this);
-            db.CSV();
+        if (!prefs.getBoolean("bol_key_first", false)) {
+
             ani1();
             StartAnimations();
             ani2();
@@ -50,6 +51,15 @@ public class SplashActivity extends AppCompatActivity {
         startActivity(intent);
         Log.d(TAG, "Intro Finished");
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean("bol_key_first", true);
+        editor.apply();
     }
 
 
@@ -71,14 +81,9 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                MoveToMain();
+                GoToMain();
             }
         },3700);
-    }
-    private void MoveToMain(){
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-        finish();
     }
 
     private void StartAnimations() {

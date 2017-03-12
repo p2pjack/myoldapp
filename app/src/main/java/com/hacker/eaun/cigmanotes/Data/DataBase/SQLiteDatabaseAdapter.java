@@ -137,7 +137,7 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
     }
 
     // Getting All Cigma WMS Notes
-    public List<MyNotesGS> getAllContacts(String TABLE) {
+    public List<MyNotesGS> getAllList(String TABLE) {
 
         List<MyNotesGS> NoteList = new ArrayList<>();
         // Select All Query
@@ -324,10 +324,11 @@ public class SQLiteDatabaseAdapter extends SQLiteOpenHelper {
 
     private class WriteCSVtoDatabase extends Thread {
 
+
         @Override
         public void run() {
             Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
-
+            Log.d(TAG, "Write Finished");
             if (databaseCreated) {
                 InputStream inStream = context.getResources().openRawResource(R.raw.cigma);
                 BufferedReader buffer = new BufferedReader(new InputStreamReader(inStream));
