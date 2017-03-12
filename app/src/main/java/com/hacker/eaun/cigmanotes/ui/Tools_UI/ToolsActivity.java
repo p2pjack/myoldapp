@@ -6,18 +6,18 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 import com.hacker.eaun.cigmanotes.R;
 import com.hacker.eaun.cigmanotes.Utils.FileChooser;
-import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 import com.hacker.eaun.cigmanotes.ui.Calculator.CalculatorActivity;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.vstechlab.easyfonts.EasyFonts;
@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ToolsActivity extends AppCompatActivity {
+public class ToolsActivity extends FragmentActivity {
 
     final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
     private SQLiteDatabaseAdapter db;

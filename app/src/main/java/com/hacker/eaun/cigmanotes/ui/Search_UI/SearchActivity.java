@@ -1,8 +1,8 @@
 package com.hacker.eaun.cigmanotes.ui.Search_UI;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,11 +10,10 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-
-import com.hacker.eaun.cigmanotes.R;
 import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
+import com.hacker.eaun.cigmanotes.R;
 
-public class SearchActivity extends AppCompatActivity  {
+public class SearchActivity extends FragmentActivity {
 
     public String SEARCH, ROW;
     private SQLiteDatabaseAdapter db;

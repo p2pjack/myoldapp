@@ -29,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         db = SQLiteDatabaseAdapter.getInstance(this);
-        db.CSV();
+        LoadCvsOnce();
         LoadSplashOnce();
     }
 
@@ -42,6 +42,16 @@ public class SplashActivity extends AppCompatActivity {
             StartAnimations();
             ani2();
         } else if (prefs.getBoolean("bol_key_first", true)) {
+            GoToMain();
+        }
+    }
+
+    private void LoadCvsOnce() {
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean("bol_key_cvs", false)) {
+            db.CSV();
+        } else if (prefs.getBoolean("bol_key_cvs", true)) {
             GoToMain();
         }
     }
@@ -59,6 +69,7 @@ public class SplashActivity extends AppCompatActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putBoolean("bol_key_first", true);
+        editor.putBoolean("bol_key_cvs", true);
         editor.apply();
     }
 
