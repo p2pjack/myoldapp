@@ -1,10 +1,12 @@
 package com.hacker.eaun.cigmanotes.model;
 
+import io.realm.RealmObject;
+
 /**
  * Created by Eaun-Ballinger on 23/08/2016.
  *Create an object to pass data to the database and adapters
  */
-public class MyNotesGS {
+public class MyNotesGS extends RealmObject {
 
     private String _id,_action,_title,_message;
     private String _Code,_Supplier,_Planner,_PhoneNumber,_Type,_Country,_Parts;

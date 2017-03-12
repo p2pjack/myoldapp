@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.core;
+package com.hacker.eaun.cigmanotes.comman;
 
 /**
  * Created by Eaun-Ballinger on 28/07/2016.

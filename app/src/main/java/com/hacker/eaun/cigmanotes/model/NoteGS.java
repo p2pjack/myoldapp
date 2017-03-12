@@ -1,11 +1,13 @@
 package com.hacker.eaun.cigmanotes.model;
 
 
+import io.realm.RealmObject;
+
 /**
  * Created by Eaun-Ballinger on 31/08/2016.
  *  Getter and Setter for My Notes
  */
-public class NoteGS {
+public class NoteGS extends RealmObject {
 
     private String _TITLE,_NOTE;
     private int _ID;

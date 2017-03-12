@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hacker.eaun.cigmanotes.ui.Tools_UI.ToolsFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout10"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="21dp"
+        android:background="@color/colorPrimary"
+        android:elevation="15dp"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_tools_import_csv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Import CSV file "
+            android:textColor="@color/TextColourWhite"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/Get_Csv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="IMPORT"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout9"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="21dp"
+        android:background="@color/colorPrimary"
+        android:elevation="15dp"
+        android:focusable="false"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_tools_export_cvs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:singleLine="false"
+            android:text="Export To CSV"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_Export_csv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:focusable="false"
+            android:text="EXPORT"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="21dp"
+        android:background="@color/colorAccent"
+        android:elevation="15dp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton_WMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="WMS"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radioButton_CIGMA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CIGMA"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radioButton_SUPPLIERS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="SUPPLIERS"
+                android:textColor="@color/TextColourWhite"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout11"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="21dp"
+        android:background="@color/colorAccent"
+        android:elevation="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_calculator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:singleLine="false"
+            android:text="Warehouse Calculator"
+            android:textColor="@color/TextColourWhite"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_calaulator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:background="@color/colorAccent"
+            android:text="START"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout17"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="21dp"
+        android:background="@color/colorPrimary"
+        android:elevation="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_launch_calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Launch Calculator"
+            android:textColor="@color/TextColourWhite"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
