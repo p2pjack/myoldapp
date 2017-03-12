@@ -2,7 +2,6 @@ package com.hacker.eaun.cigmanotes.ui.Note_UI;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,6 +18,7 @@ import android.widget.EditText;
 
 import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 import com.hacker.eaun.cigmanotes.R;
+import com.hacker.eaun.cigmanotes.core.MainApplication;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.vstechlab.easyfonts.EasyFonts;
 
@@ -37,11 +37,18 @@ public class NoteFragment extends Fragment {
     private String Title, Message, NOTE_TITLE;
     private int SwitchMode;
     private SQLiteDatabaseAdapter db;
-    private Context mContext;
+    private MainApplication mContext;
     private View mView;
 
     public NoteFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mContext = new MainApplication(getContext());
     }
 
 

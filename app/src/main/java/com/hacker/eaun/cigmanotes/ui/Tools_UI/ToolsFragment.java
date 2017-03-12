@@ -2,7 +2,6 @@ package com.hacker.eaun.cigmanotes.ui.Tools_UI;
 
 
 import android.Manifest;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -22,6 +21,7 @@ import android.widget.TextView;
 import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 import com.hacker.eaun.cigmanotes.R;
 import com.hacker.eaun.cigmanotes.Utils.FileChooser;
+import com.hacker.eaun.cigmanotes.core.MainApplication;
 import com.hacker.eaun.cigmanotes.ui.Calculator.CalculatorActivity;
 import com.sdsmdg.tastytoast.TastyToast;
 import com.vstechlab.easyfonts.EasyFonts;
@@ -43,11 +43,18 @@ public class ToolsFragment extends Fragment {
     private String mfilename;
     private RadioButton mWMS, mCIGMA, mSUPPLIERS;
     private int mROWS = 3;
-    private Context mContext;
+    private MainApplication mContext;
     private View mView;
 
     public ToolsFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mContext = new MainApplication(getContext());
     }
 
 

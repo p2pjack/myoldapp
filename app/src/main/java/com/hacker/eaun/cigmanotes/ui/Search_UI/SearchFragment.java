@@ -2,7 +2,6 @@ package com.hacker.eaun.cigmanotes.ui.Search_UI;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +15,7 @@ import android.widget.EditText;
 
 import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 import com.hacker.eaun.cigmanotes.R;
+import com.hacker.eaun.cigmanotes.core.MainApplication;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,13 +26,19 @@ public class SearchFragment extends Fragment {
     private SQLiteDatabaseAdapter db;
     private EditText SUPPLIER;
     private EditText CODE;
-    private Context mContext;
+    private MainApplication mContext;
     private View mView;
 
     public SearchFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        mContext = new MainApplication(getContext());
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
