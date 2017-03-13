@@ -2,6 +2,7 @@ package com.hacker.eaun.cigmanotes.ui.Note_UI;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -37,7 +38,7 @@ public class NoteFragment extends Fragment {
     private String Title, Message, NOTE_TITLE;
     private int SwitchMode;
     private SQLiteDatabaseAdapter db;
-    private MainApplication mContext;
+    private MainApplication mContext = new MainApplication(getContext());
     private View mView;
 
     public NoteFragment() {
@@ -47,8 +48,6 @@ public class NoteFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mContext = new MainApplication(getContext());
     }
 
 
@@ -228,4 +227,8 @@ public class NoteFragment extends Fragment {
         NEW_ID = "null";
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
 }

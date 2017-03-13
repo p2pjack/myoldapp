@@ -2,6 +2,7 @@ package com.hacker.eaun.cigmanotes.ui.Tools_UI;
 
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -43,7 +44,7 @@ public class ToolsFragment extends Fragment {
     private String mfilename;
     private RadioButton mWMS, mCIGMA, mSUPPLIERS;
     private int mROWS = 3;
-    private MainApplication mContext;
+    private MainApplication mContext = new MainApplication(getContext());
     private View mView;
 
     public ToolsFragment() {
@@ -53,8 +54,6 @@ public class ToolsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mContext = new MainApplication(getContext());
     }
 
 
@@ -264,4 +263,8 @@ public class ToolsFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
 }

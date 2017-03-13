@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.hacker.eaun.cigmanotes.Data.DataBase.SQLiteDatabaseAdapter;
 import com.hacker.eaun.cigmanotes.R;
-import com.hacker.eaun.cigmanotes.comman.MainActivity;
+import com.hacker.eaun.cigmanotes.common.MainActivity;
 
 import me.wangyuwei.particleview.ParticleView;
 

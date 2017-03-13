@@ -1,4 +1,4 @@
-package com.hacker.eaun.cigmanotes.comman;
+package com.hacker.eaun.cigmanotes.common;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;

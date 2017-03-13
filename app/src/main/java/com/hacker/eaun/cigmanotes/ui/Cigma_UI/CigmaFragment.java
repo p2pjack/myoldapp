@@ -1,6 +1,7 @@
 package com.hacker.eaun.cigmanotes.ui.Cigma_UI;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,7 +16,7 @@ import com.hacker.eaun.cigmanotes.core.MainApplication;
  */
 public class CigmaFragment extends Fragment {
 
-    private MainApplication mContext;
+    private MainApplication mContext = new MainApplication(getContext());
     private View mView;
 
 
@@ -26,8 +27,6 @@ public class CigmaFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mContext = new MainApplication(getContext());
     }
 
 
@@ -41,4 +40,8 @@ public class CigmaFragment extends Fragment {
         return mRootView;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
 }

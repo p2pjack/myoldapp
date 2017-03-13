@@ -2,6 +2,7 @@ package com.hacker.eaun.cigmanotes.ui.Search_UI;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,7 +27,7 @@ public class SearchFragment extends Fragment {
     private SQLiteDatabaseAdapter db;
     private EditText SUPPLIER;
     private EditText CODE;
-    private MainApplication mContext;
+    private MainApplication mContext = new MainApplication(getContext());
     private View mView;
 
     public SearchFragment() {
@@ -36,8 +37,6 @@ public class SearchFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mContext = new MainApplication(getContext());
     }
 
     @Override
@@ -97,4 +96,8 @@ public class SearchFragment extends Fragment {
         CODE.setText("");
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
 }

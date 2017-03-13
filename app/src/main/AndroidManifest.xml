@@ -15,6 +15,7 @@
 
 
     <application
+        android:name=".core.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -28,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".comman.MainActivity"
+            android:name=".common.MainActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_edit"
             android:theme="@style/AppTheme.NoActionBar"
@@ -37,13 +38,13 @@
             android:name=".Utils.prefs.AppPreferences"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_preferences"
-            android:parentActivityName=".comman.MainActivity"
+            android:parentActivityName=".common.MainActivity"
             android:theme="@style/AppTheme"/>
         <activity
             android:name=".ui.Search_UI.SearchActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_edit"
-            android:parentActivityName=".comman.MainActivity"
+            android:parentActivityName=".common.MainActivity"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateAlwaysHidden">
         </activity>
@@ -51,21 +52,21 @@
             android:name=".ui.Note_UI.NoteActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/title_edit"
-            android:parentActivityName=".comman.MainActivity"
+            android:parentActivityName=".common.MainActivity"
             android:theme="@style/AppTheme">
         </activity>
         <activity
             android:name=".ui.Tools_UI.ToolsActivity"
             android:configChanges="orientation|screenSize"
             android:label="TOOLS"
-            android:parentActivityName=".comman.MainActivity"
+            android:parentActivityName=".common.MainActivity"
             android:theme="@style/AppTheme">
         </activity>
         <activity
             android:name=".ui.Calculator.CalculatorActivity"
             android:configChanges="orientation|screenSize"
             android:label="Warehouse Calculator"
-            android:parentActivityName=".comman.MainActivity">
+            android:parentActivityName=".common.MainActivity">
         </activity>
 
         <meta-data android:name="com.google.android.gms.version"
