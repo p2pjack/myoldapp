@@ -14,6 +14,7 @@ import com.hacker.eaun.cigmanotes.ui.Wms_UI.WmsFragment;
 
 /**
  * Created by Eaun-Ballinger on 25/02/2017.
+ *
  */
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {

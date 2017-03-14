@@ -1,57 +1,8 @@
 package com.hacker.eaun.cigmanotes.common;
 
-/**
- * Created by Eaun-Ballinger on 28/07/2016.
- * Main Functions for the program
- * 4010 Lines of code 16/09/16
- */
-
-/**
- * Tasty Toast by Rahul Yadav
- *
- * Copyright 2016
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-
- Copyright [2016] [Jeason Wong of copyright owner]
-
- Particle Animation
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-
- */
-
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -61,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -72,13 +22,60 @@ import com.hacker.eaun.cigmanotes.ui.MyAdapter;
 import com.hacker.eaun.cigmanotes.ui.Note_UI.NoteActivity;
 import com.hacker.eaun.cigmanotes.ui.Search_UI.SearchActivity;
 import com.hacker.eaun.cigmanotes.ui.Tools_UI.ToolsActivity;
+import com.mikepenz.materialdrawer.AccountHeader;
+import com.mikepenz.materialdrawer.AccountHeaderBuilder;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.sdsmdg.tastytoast.TastyToast;
 
 import shortbread.Shortbread;
 import shortbread.Shortcut;
 
+/**
+ * Created by Eaun-Ballinger on 28/07/2016.
+ * Main Functions for the program
+ * 4010 Lines of code 16/09/16
+ * <p>
+ * Tasty Toast by Rahul Yadav
+ * <p>
+ * Copyright 2016
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * <p>
+ * Copyright [2016] [Jeason Wong of copyright owner]
+ * <p>
+ * Particle Animation
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener
+        implements View.OnClickListener
 {
     public String TABLE = "Cigma";
     public MyAdapter ca;
@@ -88,6 +85,7 @@ public class MainActivity extends AppCompatActivity
     private FloatingActionButton fab, fab1, fab2;
     private Animation fab_open, fab_close, rotate_forward, rotate_backward;
     private SQLiteDatabaseAdapter db;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -98,8 +96,8 @@ public class MainActivity extends AppCompatActivity
 
         Shortbread.create(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
         db =  SQLiteDatabaseAdapter.getInstance(this);
         FLOAT = (TextView)findViewById(R.id.float_text);
         FLOAT1 = (TextView)findViewById(R.id.float_text1);
@@ -116,35 +114,17 @@ public class MainActivity extends AppCompatActivity
         fab1.setOnClickListener(this);
         fab2.setOnClickListener(this);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
+        GetDrawItem();
         GetMyList();
-
-        loadPreferences();
     }
-
     @Override
     protected void onStart() {
         super.onStart();
-//        mMyDataListener.mGoogleApiClient.connect();
     }
-
     @Override
     protected void onStop() {
         super.onStop();
-//        if (mMyDataListener.mGoogleApiClient!= null && mMyDataListener.mGoogleApiClient.isConnected())
-//        {
-//            mMyDataListener.mGoogleApiClient.disconnect();
-//        }
     }
-
     public void GetMyList(){
         recList  = (RecyclerView) findViewById(R.id.rv);
         recList.setHasFixedSize(true);
@@ -180,7 +160,6 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
-
     private void animateFAB(){
 
         if(isFabOpen)
@@ -208,16 +187,9 @@ public class MainActivity extends AppCompatActivity
     }
     // End
     @Override
-    public void onBackPressed()
-    {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
+    public void onBackPressed()    {
 
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -225,7 +197,6 @@ public class MainActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -245,38 +216,103 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item)
-    {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+    private void GetDrawItem() {
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem()
+                .withIdentifier(1)
+                .withName(R.string.drawer_item_calc);
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem()
+                .withIdentifier(2)
+                .withName(R.string.drawer_item_barcode);
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem()
+                .withIdentifier(3)
+                .withName(R.string.draw_item_camera);
+        PrimaryDrawerItem item4 = new PrimaryDrawerItem()
+                .withIdentifier(4)
+                .withName(R.string.draw_item_web);
+        PrimaryDrawerItem item5 = new PrimaryDrawerItem()
+                .withIdentifier(5)
+                .withName(R.string.draw_item_email);
+        PrimaryDrawerItem item6 = new PrimaryDrawerItem()
+                .withIdentifier(6)
+                .withName(R.string.draw_item_settings);
+        AccountHeader headerResult = new AccountHeaderBuilder()
+                .withActivity(this)
+                .withHeaderBackground(R.drawable.dmuk)
+                .addProfiles(
+                        new ProfileDrawerItem().withName("Eaun Ballinger")
+                                .withEmail("eaun.ballinger@gmail.com")
+                                .withIcon(getResources()
+                                        .getDrawable(R.drawable.ic_favorites))
+                )
+                .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
+                    @Override
+                    public boolean onProfileChanged(View view,
+                                                    IProfile profile, boolean currentProfile) {
+                        return false;
+                    }
+                })
+                .build();
 
-       if (id == R.id.nav_notes){
-           OnNotesShortCut();
-        }
-        else if (id == R.id.nav_tools)
-        {
-            OnToolShortCut();
-        }
-        else if (id == R.id.nav_share)
-        {
+        Drawer mResult = new DrawerBuilder()
+                .withActivity(this)
+                .withToolbar(mToolbar)
+                .withTranslucentStatusBar(false)
+                .withActionBarDrawerToggle(true)
+                .withDisplayBelowStatusBar(false)
+                .withAccountHeader(headerResult)
+                .addDrawerItems(
+                        item1,
+                        item2, item3, item4, item5, item6,
+                        new DividerDrawerItem()
 
-            Toast.makeText(this, "Share Pressed", Toast.LENGTH_SHORT).show();
-        }
-        else if (id == R.id.nav_send)
-        {
-            Toast.makeText(this, "Send Pressed", Toast.LENGTH_SHORT).show();
-        }
-        else if (id == R.id.nav_supplier_search)
-        {
-            OnSupplierShortCut();
-        }
+                )
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                        // do something with the clicked item :D
+                        String name = String.valueOf(position);
+                        switch (position) {
+                            case 1:
+                                OnNotesShortCut();
+                                Toast.makeText(MainActivity.this, name,
+                                        Toast.LENGTH_SHORT)
+                                        .show();
+                                break;
+                            case 2:
+                                OnToolShortCut();
+                                Toast.makeText(MainActivity.this, name,
+                                        Toast.LENGTH_SHORT)
+                                        .show();
+                                break;
+                            case 3:
+                                OnSupplierShortCut();
+                                Toast.makeText(MainActivity.this, name,
+                                        Toast.LENGTH_SHORT)
+                                        .show();
+                                break;
+                            case 4:
+                                Toast.makeText(MainActivity.this, name,
+                                        Toast.LENGTH_SHORT)
+                                        .show();
+                                break;
+                            case 5:
+                                Toast.makeText(MainActivity.this, name,
+                                        Toast.LENGTH_SHORT)
+                                        .show();
+                                break;
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+                            case 6:
+                                Toast.makeText(MainActivity.this, name,
+                                        Toast.LENGTH_SHORT)
+                                        .show();
+                                break;
+                        }
+                        return false;
+                    }
+                                               }
+                )
+                .build();
     }
-
     @Shortcut(id = "Tools", icon = R.drawable.menu, shortLabel = "Tools items")
     public void OnToolShortCut() {
         Intent intent = new Intent(this, ToolsActivity.class);
@@ -284,7 +320,6 @@ public class MainActivity extends AppCompatActivity
         TastyToast.makeText(this, "Tools Selected",
                 TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
     }
-
     @Shortcut(id = "Search", icon = R.drawable.menu, shortLabel = "Supplier Search")
     public void OnSupplierShortCut() {
         TABLE = "Suppliers";
@@ -293,7 +328,6 @@ public class MainActivity extends AppCompatActivity
         TastyToast.makeText(this, "Suppliers has ben selected",
                 TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
     }
-
     @Shortcut(id = "Notes", icon = R.drawable.menu, shortLabel = "Add a Note")
     public void OnNotesShortCut() {
         Intent intent = new Intent(this, NoteActivity.class);
@@ -302,18 +336,4 @@ public class MainActivity extends AppCompatActivity
         TastyToast.makeText(this, "My Notes Has Been Selected",
                 TastyToast.LENGTH_SHORT, TastyToast.SUCCESS);
     }
-
-    private void loadPreferences(){
-
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean dark = sharedPreferences.getBoolean("background_colour",false);
-
-        LinearLayout main = (LinearLayout)findViewById(R.id.setbackground);
-        if (dark){
-            main.setBackgroundColor(Color.parseColor("#3c3f41"));
-        }
-        String sharedPreferencesString = sharedPreferences.getString("title","Cigma Notes");
-        setTitle(sharedPreferencesString);
-    }
 }
-
